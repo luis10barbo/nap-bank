@@ -10,10 +10,15 @@
 <body>
     <form action="api/registro.php" method="post">
         <p>registro de login</p>
+        <input type="text" placeholder="Apelido" name="apelido"></input>
+        <input type="email" placeholder="Email" name="email"></input>
+        <input type="password" placeholder="Senha" name="senha"></input>
+        <input type="password" placeholder="Confimar senha" name="senha_confirmar"></input>
+        <input type="password" placeholder="Nome Completo" name="nome"></input>
+        <input type="password" placeholder="CPF" name="cpf"></input>
+        <input type="date" placeholder="Data Nascimento" name="data_nascimento"></input>
 
-        <input type="email" placeholder="email" name="email"></input>
-        <input type="password" placeholder="senha" name="password"></input>
-        <input type="password" placeholder="confimar senha" name="password_confirm"></input>
+
         <input type="submit"></input>
 
     </form>

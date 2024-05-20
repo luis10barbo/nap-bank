@@ -11,6 +11,10 @@ if (!isset($_POST["email"]) || !isset($_POST["senha"]) || !isset($_POST["senha_c
 $email = $_POST["email"];
 $senha = $_POST["password"];
 $senha_confirmar = $_POST["password_confirm"];
+$apelido_usuario = $_POST["apelido"];
+$nome = $_POST["nome"];
+$cpf = $_POST["cpf"];
+$data_nascimento = $_POST["data_nascimento"];
 
 // checar se existe email registrado ok
 // se nao tiver registrado usuario com este email, dar hash na senha, guardar o email e o hash da senha no db
