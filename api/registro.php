@@ -9,9 +9,9 @@ if (!isset($_POST["email"]) || !isset($_POST["senha"]) || !isset($_POST["senha_c
     return;
 
 $email = $_POST["email"];
-$senha = $_POST["password"];
-$senha_confirmar = $_POST["password_confirm"];
-$apelido_usuario = $_POST["apelido"];
+$senha = $_POST["senha"];
+$senha_confirmar = $_POST["senha_confirmar"];
+$apelido = $_POST["apelido"];
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
 $data_nascimento = $_POST["data_nascimento"];
@@ -34,7 +34,7 @@ if ($resultado) {
 $hash_senha = password_hash($senha, PASSWORD_DEFAULT);
 echo $hash_senha;
 
-Database::usuario()->inserir($email, $hash_senha, $apelido_usuario, $nome_usuario, $cpf_usuario, $data_nascimento);
+Database::usuario()->inserir($email, $hash_senha, $apelido, $nome, $cpf, $data_nascimento);
 
 $resultado = Database::usuario()->buscar_email($email);
 if (!$resultado)

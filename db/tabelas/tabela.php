@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/../../utils/array.php");
+require_once (__DIR__ . "/../../utils/array.php");
 abstract class Tabela
 {
     public static PDO $db;
@@ -16,7 +16,7 @@ abstract class Tabela
     {
         $formatacao_sql = array();
         foreach ($argumentos as $nome_argumento => $valor_argumento) {
-            if (!$valor_argumento && $ignorar_null)
+            if (is_null($valor_argumento) && $ignorar_null)
                 continue;
 
             array_push($formatacao_sql, $nome_argumento . " = :" . $nome_argumento);
@@ -52,7 +52,6 @@ abstract class Tabela
 
         $string_where = " WHERE " . join(" AND ", $where);
         $string_sql = "SELECT " . ($argumentos_select ? join(", ", $argumentos_select) : "*") . " FROM " . $this->nome_tabela() . $string_where;
-
         $comando = self::$db->prepare($string_sql);
         $comando->execute($argumentos_where_filtrado);
         return $comando->fetch(PDO::FETCH_ASSOC);

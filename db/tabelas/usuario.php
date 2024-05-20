@@ -30,7 +30,7 @@ class Usuario extends Tabela
     }
     public function buscar(int $id_usuario, bool $incluir_senha = false)
     {
-        $colunas_incluidas = array("id_usuario", "apelido_usuario", "email_usuario");
+        $colunas_incluidas = array("id_usuario", "apelido_usuario", "email_usuario", "cpf_usuario", "nome_usuario", "data_nascimento");
         if ($incluir_senha)
             array_push($colunas_incluidas, "senha_usuario");
 

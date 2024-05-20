@@ -3,7 +3,7 @@ function array_filtrar_null(array $array)
 {
     $filtrado = array();
     foreach ($array as $nome => $valor) {
-        if (!$valor)
+        if (is_null($valor))
             continue;
 
         $filtrado[$nome] = $valor;

@@ -1,10 +1,17 @@
+<?php
+require_once (__DIR__ . "/utils/sessao.php");
+echo json_encode(adquirir_usuario())
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
+
 <body>
     <form action="api/login.php" method="post">
         <p>login aqui</p>
@@ -14,4 +21,5 @@
 
     </form>
 </body>
+
 </html>

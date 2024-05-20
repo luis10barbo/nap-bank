@@ -15,7 +15,7 @@ INSERT INTO "usuario" VALUES (
 	0,
 	"teste",
 	"teste@teste.com",
-	"teste",
+	"$2y$10$E4cbbX4MSKT7vpEBFpJO4.H9lM08/KrkP90HbKUv0He5Efcx/VKFu", /* senha: teste */
 	"Teste da Silva Nunes",
 	"111.222.333-44",
 	"01/01/1990"
