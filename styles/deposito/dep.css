@@ -1,0 +1,23 @@
+*{
+    font-size: 17px;
+}
+.baixo{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+}
+#radio2{
+    margin-left: 10px;
+}
+
+@media (max-width:991px) {
+    .baixo{
+        flex-direction: column;
+        height: 100%;
+    }
+    #botao{
+        margin-bottom: 10px;
+    }
+}
