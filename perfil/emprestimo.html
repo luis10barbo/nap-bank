@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Estácio</title>
+    <link rel="stylesheet" href="../static/css/emprestimo.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="quadrado-branco">
+      <h2>Emprestimos</h2>
+
+      <p>
+        Pegue um emprestimo na sua conta <span class="roxo"><b>NAP</b></span>
+      </p>
+
+      <form>
+        <div id="input_box">
+          <div class="input-field">
+            <label for="value" class="label-input">Valor:</label>
+            <input type="number" id="value" placeholder="Digite o valor" />
+          </div>
+
+          <br />
+          <br />
+
+          <div class="input-field">
+            <label for="fee" class="label-input">Parcelas:</label>
+            <input
+              type="number"
+              id="fee"
+              min="1"
+              max="12"
+              placeholder="Até 12 meses"
+            />
+
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
+
+          <p>
+            Você passará a ter um emprestimo no valor total de
+
+            <span class="vermelho" id="total"> R$ 0,00 </span>
+          </p>
+
+          <button type="button" id="calculate">Depositar</button>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="../static/js/emprestimo.js"></script>
+  </body>
+</html>
