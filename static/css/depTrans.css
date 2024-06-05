@@ -11,7 +11,7 @@ body{
     width: 100%;
     height: 100%;
     background-color: white;
-    padding:40px 80px;
+    padding: 30px 60px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .menu{
@@ -20,7 +20,7 @@ body{
     width: 100%;
     align-items: center;
     flex-direction: row;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .esquerda{
     flex: 1;
@@ -33,7 +33,7 @@ body{
 .sidenav {
     height: 400px; 
     width: 0; 
-    position: fixed; 
+    position: absolute; 
     z-index: 1; 
     background: linear-gradient(-110deg, #9F6DD2, #FF00C7);
     overflow-x: hidden;
@@ -155,16 +155,15 @@ p{
         margin: 30px 0;
         padding: 30px;
     }
-    #hUm{
-        font-size: 35px
-    }
+    #titulo{
+      font-size: 25px;
+  }
     .logo:hover{
       transition: none;
       transform: none;
-      
     }
 }
-@media screen and (max-height: 450px) {
+@media (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
