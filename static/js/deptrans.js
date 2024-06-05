@@ -3,7 +3,6 @@ function openNav() {
     document.querySelector(".logo").style.boxShadow = "none";
   }
   
-  /* Set the width of the side navigation to 0 */
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.querySelector(".logo").style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset";
