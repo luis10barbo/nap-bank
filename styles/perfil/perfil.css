@@ -198,9 +198,6 @@ img{
     height: 40px;
     margin-bottom: 10px;
 }
-.icone-botao {
-    /* filter: invert(100%) sepia(10%) saturate(7499%) hue-rotate(278deg) brightness(115%) contrast(103%); */
-}
 
 
 @media (max-width:991px) {

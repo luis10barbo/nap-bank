@@ -158,6 +158,11 @@ p{
     #hUm{
         font-size: 35px
     }
+    .logo:hover{
+      transition: none;
+      transform: none;
+      
+    }
 }
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
