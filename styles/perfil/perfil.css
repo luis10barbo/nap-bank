@@ -16,53 +16,12 @@ body{
 }
 .menu{
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     width: 100%;
     align-items: center;
     flex-direction: row;
     margin-bottom: 50px;
 }
-.esquerda{
-    flex: 1;
-}
-.direita{
-    display: flex;
-    justify-content: right;
-    flex: 1;
-}
-.sidenav {
-    height: 400px; 
-    width: 0; 
-    position: fixed; 
-    z-index: 1; 
-    background: linear-gradient(-110deg, #9F6DD2, #FF00C7);
-    overflow-x: hidden;
-    padding-top: 60px; 
-    transition: 0.5s; 
-  }
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
-    display: block;
-    transition: 0.3s;
-  }
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  #main {
-    transition: margin-left .5s;
-    padding: 20px;
-  }
-
 .logo{
     width: 56px;
     height: 56px;
@@ -98,6 +57,41 @@ p{
     background-color: #9F6DD2;
     border-radius: 50%;
     color: white;
+}
+.sidenav {
+    margin-right: -4px;
+    margin-top: 340px;
+    height: 400px; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    background: linear-gradient(-110deg, #9F6DD2, #FF00C7);
+    overflow-x: hidden;
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+#imgPerfil{
+    width: 200px;
+    height: 200px;
 }
 .button-6 {
   align-items: center;
@@ -145,7 +139,67 @@ p{
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
+  
 }
+#foto-perfil{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+#info-nome{
+    display: block;
+    margin-bottom: 30px;
+}
+#info-conta{
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: -15px;
+}
+#info-saldo,#info-fatura{
+    background-color: #F4F4F4;
+    margin: 10px;
+    padding: 15px;
+}
+.baixo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#info-valores{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#rowBaixo{
+    margin-top: 30px;
+    flex-direction: column;
+}
+#acoes{
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+#btnAcoes{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    max-width: 150px;
+    min-width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+#botoesAcoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+
 @media (max-width:991px) {
     body{
         height: 100%;
@@ -155,16 +209,23 @@ p{
         margin: 30px 0;
         padding: 30px;
     }
-    #hUm{
-        font-size: 35px
-    }
     .logo:hover{
       transition: none;
       transform: none;
-      
+    }
+    #info-saldo,#info-fatura{
+        min-width: 240px;
+        max-width: 240px;
+    }
+    #info-valores{
+        display: flex;
+        justify-content: left;
+        align-items: center;
     }
 }
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+@media (max-width:767px) {
+    #info-valores{
+        justify-content: center;
+    }
+}
+
