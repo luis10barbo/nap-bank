@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__."/../db/database.php");
-require_once(__DIR__."/../utils/error.php");
-require_once(__DIR__."/../utils/sessao.php");
+require_once (__DIR__ . "/../db/database.php");
+require_once (__DIR__ . "/../utils/msg.php");
+require_once (__DIR__ . "/../utils/sessao.php");
 
 
 if (!isset($_POST["email"]) || !isset($_POST["password"]))
@@ -17,17 +17,17 @@ $senha = $_POST["password"];
 
 $resultado = Database::usuario()->buscar_email($email);
 
-if(!$resultado){
+if (!$resultado) {
     echo criar_erro("Email nao existe");
     return;
 }
-if(!password_verify($senha, $resultado["senha_usuario"])){
+if (!password_verify($senha, $resultado["senha_usuario"])) {
     echo criar_erro("Senha incorreta");
     return;
 }
 
 $sessao = adquirir_sessao();
-Database::sessao()->atualizar($sessao["id_sessao"],$resultado["id_usuario"]);
+Database::sessao()->atualizar($sessao["id_sessao"], $resultado["id_usuario"]);
 
 echo "Email: " . $email . "Senha:" . $senha;
 ?>
