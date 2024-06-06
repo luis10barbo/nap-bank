@@ -28,7 +28,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="alert alert-danger" role="alert">
+            <div class="alert alert-danger" role="alert" id="alert-erro">
               Senhas nao coincidem!
             </div>
           </div>

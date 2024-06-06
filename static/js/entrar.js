@@ -15,8 +15,9 @@ $("#form-entrar").on("submit", async (event) => {
         const respostaJson = JSON.parse(response);
         if (respostaJson.tipo === "erro") {
             const erro = respostaJson.mensagem;
+            $("#alert-erro").text(erro);
+            // @ts-ignore
             $("#janela").modal();
-            console.error(erro);
             return false;
         }
     } catch (e) {
@@ -24,5 +25,5 @@ $("#form-entrar").on("submit", async (event) => {
         const respostaString = response;
         console.log(respostaString);
     }
-    
+    window.location.href = "./perfil.php"
 })

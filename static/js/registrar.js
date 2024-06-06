@@ -15,8 +15,9 @@ $("#form-registro").on("submit", async (event) => {
     // }
 
     if (entries["senha"] !== entries["senha_confirmar"]) {
+        $("#alert-erro").text("Senhas nao coincidem"); 
+        // @ts-ignore
         $("#janela").modal();
-        console.error("Senhas nao coincidem");
         return;
     }
 
@@ -25,12 +26,14 @@ $("#form-registro").on("submit", async (event) => {
         const respostaJson = JSON.parse(response);
         if (respostaJson.tipo === "erro") {
             const erro = respostaJson.mensagem;
+            $("#alert-erro").text(erro);
+            // @ts-ignore
             $("#janela").modal();
-            console.error(erro);
             return false;
         }
     } catch (e) {
         /** @type {string} */
         const respostaString = response;
     }
+    window.location.href = "./perfil.php"
 })
