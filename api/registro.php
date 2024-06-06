@@ -32,7 +32,6 @@ if ($resultado) {
 }
 
 $hash_senha = password_hash($senha, PASSWORD_DEFAULT);
-echo $hash_senha;
 
 Database::usuario()->inserir($email, $hash_senha, $apelido, $nome, $cpf, $data_nascimento);
 
