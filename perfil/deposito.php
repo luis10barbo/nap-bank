@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container container-corpo">
     <div class="corpo rounded-lg">
       <header class="menu">
         <div class="esquerda">
