@@ -21,10 +21,11 @@
   </head>
   <body>
     <div class="main">
-      <form>
+      <form id="form-entrar">
         <div class="form-group">
           <label for="email">Email</label>
           <input
+            name="email"
             type="email"
             class="form-control"
             id="email"
@@ -34,6 +35,7 @@
         <div class="form-group">
           <label for="senha">Senha</label>
           <input
+            name="senha"
             type="password"
             class="form-control"
             id="senha"
@@ -42,11 +44,12 @@
         </div>
         <div id="mover" class="row">
           <a id="a" href="registrar.html">Fazer Cadastro</a>
-          <button id="button" type="button" class="btn btn-primary">
-            Enviar
-          </button>
+          <button id="button" class="btn btn-primary">Enviar</button>
         </div>
       </form>
     </div>
+    <script src="static/js/lib/jquery.js"></script>
+    <script src="static/js/lib/bootstrap.js"></script>
+    <script src="static/js/entrar.js"></script>
   </body>
 </html>
