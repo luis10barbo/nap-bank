@@ -91,27 +91,22 @@ if (empty($usuario)) {
             <h3 class="col-md" id="acoes">Ações Rápidas</h3>
           </div>
           <div id="botoesAcoes" class="row">
-            <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
-              data-target="#janela">
+            <a href="perfil/transferencia.php" id="btnAcoes" class="button-6 col-md rounded">
               <img class="icone-botao" src="static/img/perfil/transfer.svg" alt="" />
               Transferência
-            </button>
-            <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
-              data-target="#janela">
+            </a>
+            <a href="perfil/pagar.php" id="btnAcoes" class="button-6 col-md rounded">
               <img class="icone-botao" src="static/img/perfil/pay.svg" />Pagar
-            </button>
-            <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
-              data-target="#janela">
+            </a>
+            <a href="perfil/deposito.php" id="btnAcoes" class="button-6 col-md rounded">
               <img class="icone-botao" src="static/img/perfil/deposit.svg" />Depósito
-            </button>
-            <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
-              data-target="#janela">
+            </a>
+            <a href="perfil/emprestimo.php" id="btnAcoes" class="button-6 col-md rounded">
               <img class="icone-botao" src="static/img/perfil/empres.svg" />Empréstimos
-            </button>
-            <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
-              data-target="#janela">
+            </a>
+            <!-- <a id="btnAcoes" class="button-6 col-md rounded">
               <img class="icone-botao" src="static/img/perfil/credit-card.svg" />Cartões
-            </button>
+            </a> -->
           </div>
         </div>
       </section>
