@@ -1,6 +1,6 @@
 <?php
 
-require_once (__DIR__ . "/../utils/error.php");
+require_once (__DIR__ . "/../utils/msg.php");
 require_once (__DIR__ . "/../db/database.php");
 require_once (__DIR__ . "/../utils/sessao.php");
 
