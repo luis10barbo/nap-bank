@@ -2,7 +2,7 @@
 require_once (__DIR__ . "/utils/sessao.php");
 $usuario = adquirir_usuario();
 if (empty($usuario)) {
-  header("Location: login.php");
+  header("Location: entrar.php");
   die();
 }
 ?>
