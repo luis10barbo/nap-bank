@@ -1,3 +1,10 @@
+<?php
+require_once (__DIR__ . "/utils/sessao.php");
+if (!empty(adquirir_usuario())) {
+  header("Location: perfil.php");
+  die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
