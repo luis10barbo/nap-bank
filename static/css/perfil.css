@@ -67,7 +67,6 @@ p{
 .sidenav {
     margin-right: -4px;
     margin-top: 340px;
-    height: 400px; 
     width: 0; 
     position: fixed; 
     z-index: 1; 

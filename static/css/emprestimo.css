@@ -72,7 +72,6 @@ p{
     flex: 1;
 }
 .sidenav {
-    height: 400px; 
     width: 0; 
     position: fixed; 
     z-index: 1; 

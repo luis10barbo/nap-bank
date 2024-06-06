@@ -1,3 +1,11 @@
+<?php
+require_once (__DIR__ . "/utils/sessao.php");
+$usuario = adquirir_usuario();
+if (empty($usuario)) {
+  header("Location: login.php");
+  die();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,6 +15,9 @@
   <link rel="stylesheet" href="static/css/lib/bootstrap.css" />
   <link rel="stylesheet" href="static/css/perfil.css" />
   <title>Document</title>
+  <script>
+    const perfilUsuario = <?php echo json_encode($usuario) ?>;
+  </script>
 </head>
 
 <body>
@@ -22,6 +33,7 @@
           <a href="#">Emprestimo</a>
           <a href="#">Cartões</a>
           <a href="#">PIX</a>
+          <a>Sair</a>
         </div>
         <div class="logo">
           <div class="traco"></div>
@@ -36,8 +48,8 @@
           </div>
           <div id="info-perfil" class="col-md">
             <div id="info-nome" class="row-md">
-              <h3>Nome Completo do Usuario</h3>
-              <h6>Email do Usuario</h6>
+              <h3><?php echo $usuario["nome_usuario"] ?></h3>
+              <h6><?php echo $usuario["email_usuario"] ?></h6>
             </div>
             <div id="info-conta" class="row-md-6">
               <div class="col-md-3">

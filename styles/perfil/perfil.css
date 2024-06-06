@@ -61,7 +61,6 @@ p{
 .sidenav {
     margin-right: -4px;
     margin-top: 340px;
-    height: 400px; 
     width: 0; 
     position: fixed; 
     z-index: 1; 
@@ -69,12 +68,13 @@ p{
     overflow-x: hidden;
     padding-top: 60px; 
     transition: 0.5s; 
+    color: #ffffff;
   }
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #ffffff;
+    
     display: block;
     transition: 0.3s;
   }
