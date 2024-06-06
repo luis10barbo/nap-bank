@@ -15,7 +15,7 @@ $("#form-entrar").on("submit", async (event) => {
         const respostaJson = JSON.parse(response);
         if (respostaJson.tipo === "erro") {
             const erro = respostaJson.mensagem;
-            // TODO: Mostrar modal com erro acima
+            $("#janela").modal();
             console.error(erro);
             return false;
         }
