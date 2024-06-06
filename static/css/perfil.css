@@ -24,6 +24,8 @@ body {
 }
 
 .menu {
+    position: sticky;
+    top:0;
     display: flex;
     justify-content: end;
     width: 100%;
