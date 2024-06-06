@@ -16,10 +16,10 @@
             <header class="menu">
                 <div id="mySidenav" class="sidenav rounded-lg">
                     <a href="javascript:void(0)" class="closebtn">&times;</a>
-                    <a class="active" href="#">Perfil</a>
-                    <a href="transferencia.html">Transferência</a>
-                    <a href="deposito.html">Deposito</a>
-                    <a href="#">Emprestimo</a>
+                    <a class="active" href="perfil.html">Perfil</a>
+                    <a href="perfil/transferencia.html">Transferência</a>
+                    <a href="perfil/deposito.html">Depósito</a>
+                    <a href="perfil/emprestimo.html">Emprestimo</a>
                     <a href="#">Cartões</a>
                     <a href="#">PIX</a>
                 </div>
@@ -73,14 +73,20 @@
                         <h3 class="col-md" id="acoes">Ações Rápidas</h3>
                     </div>
                     <div id="botoesAcoes" class="row">
-                        <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
+                        <a href="perfil/transferencia.html" style="text-decoration: none;">
+                            <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
                         data-target="#janela"><img class="icone-botao" src="static/img/perfil/transfer.svg" alt=""> Transferência</button>
+                        </a>
                         <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
                         data-target="#janela"><img class="icone-botao" src="static/img/perfil/pay.svg">Pagar</button>
-                        <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
-                        data-target="#janela"><img class="icone-botao" src="static/img/perfil/deposit.svg">Depósito</button>
-                        <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
-                        data-target="#janela"><img class="icone-botao" src="static/img/perfil/empres.svg">Empréstimos</button>
+                        <a href="perfil/deposito.html" style="text-decoration: none;">
+                            <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
+                            data-target="#janela"><img class="icone-botao" src="static/img/perfil/deposit.svg">Depósito</button>
+                        </a>
+                        <a href="perfil/emprestimo.html" style="text-decoration: none;">
+                            <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
+                            data-target="#janela"><img class="icone-botao" src="static/img/perfil/empres.svg">Empréstimos</button>
+                        </a>
                         <button id="btnAcoes" class="button-6 col-md rounded" role="button" type="button" data-toggle="modal"
                         data-target="#janela"><img class="icone-botao" src="static/img/perfil/credit-card.svg">Cartões</button>
                     </div>
