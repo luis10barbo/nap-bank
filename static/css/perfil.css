@@ -24,6 +24,7 @@ body {
 }
 
 .menu {
+    z-index: 1;
     position: sticky;
     top:0;
     display: flex;
@@ -35,6 +36,7 @@ body {
 }
 
 .logo {
+    cursor: pointer;
     width: 56px;
     height: 56px;
     background: linear-gradient(-110deg, #9F6DD2, #FF00C7);

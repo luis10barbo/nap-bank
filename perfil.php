@@ -33,7 +33,7 @@ if (empty($usuario)) {
           <a href="#">Emprestimo</a>
           <a href="#">Cartões</a>
           <a href="#">PIX</a>
-          <a>Sair</a>
+          <a id="botao-sair">Sair</a>
         </div>
         <div class="logo">
           <div class="traco"></div>
