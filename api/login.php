@@ -5,11 +5,11 @@ require_once (__DIR__ . "/../utils/msg.php");
 require_once (__DIR__ . "/../utils/sessao.php");
 
 
-if (!isset($_POST["email"]) || !isset($_POST["password"]))
+if (!isset($_POST["email"]) || !isset($_POST["senha"]))
     return;
 
 $email = $_POST["email"];
-$senha = $_POST["password"];
+$senha = $_POST["senha"];
 
 // Buscar o usuario pelo email
 // checar se a senha enviada corresponde ao hash guardado no usuario
