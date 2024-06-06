@@ -22,11 +22,11 @@
           <div id="mySidenav" class="sidenav rounded-lg">
             <a href="javascript:void(0)" class="closebtn">&times;</a>
             <a class="active" href="../perfil.html">Perfil</a>
-            <a href="../perfil/transferencia.html">Transferência</a>
-            <a href="perfil/deposito.html">Depósito</a>
-            <a href="../perfil/emprestimo.html">Emprestimo</a>
+            <a href="transferencia.php">Transferência</a>
+            <a href="deposito.php">Depósito</a>
+            <a href="emprestimo.php">Emprestimo</a>
             <a href="#">Cartões</a>
-            <a href="#">PIX</a>
+            <a href="pix.php">PIX</a>
           </div>
           <div class="logo">
             <div class="traco"></div>

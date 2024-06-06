@@ -28,11 +28,11 @@ if (empty($usuario)) {
         <div id="mySidenav" class="sidenav rounded-lg">
           <a href="javascript:void(0)" class="closebtn">&times;</a>
           <a class="active" href="#">Perfil</a>
-          <a href="transferencia.html">Transferência</a>
-          <a href="deposito.html">Deposito</a>
-          <a href="#">Emprestimo</a>
-          <a href="#">Cartões</a>
-          <a href="#">PIX</a>
+          <a href="perfil/transferencia.php">Transferência</a>
+          <a href="perfil/deposito.php">Deposito</a>
+          <a href="perfil/emprestimo.php">Emprestimo</a>
+          <!-- <a href="#">Cartões</a> -->
+          <a href="perfil/pix.php">PIX</a>
           <a id="botao-sair">Sair</a>
         </div>
         <div class="logo">
