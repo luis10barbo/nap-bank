@@ -15,7 +15,7 @@ $("#form-registro").on("submit", async (event) => {
     // }
 
     if (entries["senha"] !== entries["senha_confirmar"]) {
-        // TODO: Mostrar modal de erro caso senhas nao coincidirem
+        $("#janela").modal();
         console.error("Senhas nao coincidem");
         return;
     }
@@ -25,7 +25,7 @@ $("#form-registro").on("submit", async (event) => {
         const respostaJson = JSON.parse(response);
         if (respostaJson.tipo === "erro") {
             const erro = respostaJson.mensagem;
-            // TODO: Mostrar modal com erro acima
+            $("#janela").modal();
             console.error(erro);
             return false;
         }

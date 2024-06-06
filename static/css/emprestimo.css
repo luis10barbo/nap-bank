@@ -73,7 +73,7 @@ p{
 }
 .sidenav {
     width: 0; 
-    position: fixed; 
+    position: absolute; 
     z-index: 1; 
     background: linear-gradient(-110deg, #9F6DD2, #FF00C7);
     overflow-x: hidden;

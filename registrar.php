@@ -14,37 +14,27 @@
 
 <body>
   <div class="container">
-    <!-- <div
-        id="modal-resultado"
-        class="modal-dialog modal-dialog-centered"
-        role="document"
-      >
+
+    <div class="modal fade" id="janela" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Registro</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Atenção.
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <div class="alert alert-danger" role="alert" id="alerta-erro-modal">
-              Erro aqui
-            </div>
-            <div
-              class="alert alert-success"
-              role="alert"
-              id="alerta-sucesso-modal"
-            >
-              sucesso aqui
+            <div class="alert alert-danger" role="alert">
+              Senhas nao coincidem!
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
+    </div>
     <div class="corpo rounded-lg">
       <div id="menu">
         <h2 id="h2">Cadastro</h2>
@@ -57,7 +47,7 @@
           </div>
           <div class="form-group col-sm-5">
             <label for="email">Email</label>
-            <input name="email" type="email" class="form-control" placeholder="Digite seu email" />
+            <input required name="email" type="email" class="form-control" placeholder="Digite seu email" />
           </div>
           <div class="form-group col-sm-5">
             <label for="nome">Nome</label>
@@ -65,13 +55,14 @@
           </div>
           <div class="form-group col-sm-5">
             <label for="senha">Senha</label>
-            <input name="senha" type="password" class="form-control" placeholder="Senha" />
+            <input required name="senha" type="password" class="form-control" placeholder="Senha" />
           </div>
         </div>
         <div class="row">
           <div class="form-group col-sm-5">
             <label for="senha_confirmar">Confimar Senha</label>
-            <input name="senha_confirmar" type="password" class="form-control" placeholder="Confimer sua senha" />
+            <input required name="senha_confirmar" type="password" class="form-control"
+              placeholder="Confirmar sua senha" />
           </div>
           <div class="form-group col-sm-5">
             <label for="cpf">CPF</label>

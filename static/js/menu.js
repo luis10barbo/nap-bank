@@ -1,6 +1,8 @@
 $(".logo").on("click", () => {
   $("#mySidenav").css({ "width": "205px" })
   $(".logo").css({ "boxShadow": "none" })
+  $(".logo:hover").css({ "transition": "none" })
+  $(".logo:hover").css({ "transform": "none" })
 })
 
 $(".closebtn").on("click", () => {
