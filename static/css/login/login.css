@@ -39,7 +39,7 @@ body{
     display: flex;
     justify-items: center;
     align-items: center;
-    gap: 7px;
+    gap: 15px;
     margin-left: 50px;
     margin-top: 25px;
 }
