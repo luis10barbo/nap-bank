@@ -1,37 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/css/depTrans.css" />
-    <link rel="stylesheet" href="../static/css/transferencia/tran.css" />
-    <link rel="stylesheet" href="../static/css/lib/bootstrap.css" />
-    <title>Transferencia</title>
-  </head>
-  <body>
-    <div class="container">
-        <div class="corpo rounded-lg">
-            <header class="menu row-3">
-                <div class="esquerda col-sm">
-                    <h1 id="titulo">Fazer Transfêrencia</h1>
-                </div>
-                <div class="direita col-sm">
-                    <div id="mySidenav" class="sidenav rounded-lg">
-                        <a href="javascript:void(0)" class="closebtn">&times;</a>
-                        <a class="active" href="#">Perfil</a>
-                        <a href="transferencia.html">Transferência</a>
-                        <a href="deposito.html">Deposito</a>
-                        <a href="#">Emprestimo</a>
-                        <a href="#">Cartões</a>
-                        <a href="#">PIX</a>
-                      </div>
-                      <div class="logo">
-                        <div class="traco"></div>
-                        <div class="traco"></div>
-                        <div class="traco"></div>
-                    </div>
-                </div>
-            </header>
 
 <head>
   <meta charset="UTF-8" />
@@ -43,14 +11,15 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container container-corpo">
     <div class="corpo rounded-lg">
       <header class="menu">
         <div class="esquerda">
-          <h1>Fazer Transfêrencia</h1>
+          <h2 id="titulo">Transfêrencia</h2>
         </div>
         <div class="direita">
           <div id="mySidenav" class="sidenav rounded-lg">
+<<<<<<< HEAD:perfil/transferencia.html
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a class="active" href="#">Perfil</a>
             <a href="transferencia.html">Transferência</a>
@@ -58,8 +27,17 @@
             <a href="emprestimo.html">Emprestimo</a>
             <a href="#">Cartões</a>
             <a href="pix.html">PIX</a>
+=======
+            <a href="javascript:void(0)" class="closebtn">&times;</a>
+            <a class="active" href="../perfil.php">Perfil</a>
+            <a href="transferencia.php">Transferência</a>
+            <a href="deposito.php">Depósito</a>
+            <a href="emprestimo.php">Emprestimo</a>
+            <a href="#">Cartões</a>
+            <a href="pix.php">PIX</a>
+>>>>>>> main:perfil/transferencia.php
           </div>
-          <div class="logo" onclick="openNav()">
+          <div class="logo">
             <div class="traco"></div>
             <div class="traco"></div>
             <div class="traco"></div>
@@ -68,7 +46,7 @@
       </header>
 
       <form class="grid">
-        <div class="row justify-content-around">
+        <div class="row justify-content-around ">
           <div class="col-lg-3">
             <div class="form-group">
               <label for="banco">Banco</label>
@@ -127,38 +105,39 @@
         <button class="button-6 rounded" role="button" type="button" data-toggle="modal" data-target="#janela">
           Transferência
         </button>
+      </form>
 
-        <div class="modal fade" id="janela" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-          aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">
-                  Transferência
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="alert alert-success" role="alert">
-                  Transferência realizada com sucesso!
-                </div>
+      <div class="modal fade" id="janela" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">
+                Transferência
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="alert alert-success" role="alert">
+                Transferência realizada com sucesso!
               </div>
             </div>
           </div>
         </div>
-      </form>
+      </div>
+
     </div>
   </div>
 
   <script type="text/javascript" src="../static/js/lib/jquery.js"></script>
   <script type="text/javascript" src="../static/js/lib/bootstrap.js"></script>
 
-    <script src="../static/js/deptrans.js"></script>
-    <script src="../static/js/menu.js"></script>
+  <script src="../static/js/deptrans.js"></script>
+  <script src="../static/js/menu.js"></script>
 
-  </body>
+</body>
 
 
 </html>

@@ -13,6 +13,9 @@ function adquirir_sessao()
 function adquirir_usuario()
 {
     $sessao = adquirir_sessao();
+    if (empty($sessao["id_usuario"])) {
+        return null;
+    }
     return Database::usuario()->buscar($sessao["id_usuario"]);
 }
 ?>

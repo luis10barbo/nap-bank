@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container container-corpo">
     <div class="corpo rounded-lg">
       <header class="menu">
         <div class="esquerda">
@@ -24,12 +24,12 @@
         <div class="direita">
           <div id="mySidenav" class="sidenav rounded-lg">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a class="active" href="#">Perfil</a>
-            <a href="transferencia.html">Transferência</a>
-            <a href="deposito.html">Deposito</a>
-            <a href="#">Emprestimo</a>
+            <a class="active" href="../perfil.php">Perfil</a>
+            <a href="transferencia.php">Transferência</a>
+            <a href="deposito.php">Depósito</a>
+            <a href="emprestimo.php">Emprestimo</a>
             <a href="#">Cartões</a>
-            <a href="#">PIX</a>
+            <a href="pix.php">PIX</a>
           </div>
           <div class="logo" onclick="openNav()">
             <div class="traco"></div>
@@ -57,7 +57,8 @@
 
           <p>Você passará a ter um emprestimo no valor total de<span class="vermelho" id="total"> R$ 0,00 </span></p>
 
-          <button class="button col-sm-3 form-group" role="button" type="button" data-toggle="modal" data-target="#janela" id="calculate">Depositar</button>
+          <button class="button col-sm-3" role="button" type="button" data-toggle="modal" data-target="#janela"
+            id="calculate">Emprestimo</button>
 
         </div>
       </form>
@@ -88,6 +89,7 @@
   <script type="text/javascript" src="../static/js/emprestimo.js"></script>
   <script src="../static/js/lib/jquery.js"></script>
   <script src="../static/js/lib/bootstrap.js"></script>
+  <script src="../static/js/menu.js"></script>
 </body>
 
 </html>

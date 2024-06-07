@@ -1,10 +1,7 @@
-$("#form-registro").on("submit", async (event) => {
+$("#form-entrar").on("submit", async (event) => {
     event.preventDefault();
-
-    // @ts-ignore
-    const entries = Object.fromEntries(new FormData(/**@type {HTMLFormElement} */ ($("#form-registro")[0])).entries());
+    const entries = Object.fromEntries(new FormData(/**@type {HTMLFormElement} */ ($("#form-entrar")[0])).entries());
     console.log(entries);
-
     // TODO: descomentar
     // for (let entry in entries) {
     //     if (!entries[entry]) {
@@ -13,15 +10,7 @@ $("#form-registro").on("submit", async (event) => {
     //         return false;
     //     }
     // }
-
-    if (entries["senha"] !== entries["senha_confirmar"]) {
-        $("#alert-erro").text("Senhas nao coincidem"); 
-        // @ts-ignore
-        $("#janela").modal();
-        return;
-    }
-
-    const response = await $.ajax({method: "POST", data:entries, url:"api/registro.php"});
+    const response = await $.ajax({method: "POST", data:entries, url:"api/login.php"});
     try {
         const respostaJson = JSON.parse(response);
         if (respostaJson.tipo === "erro") {
@@ -34,6 +23,7 @@ $("#form-registro").on("submit", async (event) => {
     } catch (e) {
         /** @type {string} */
         const respostaString = response;
+        console.log(respostaString);
     }
     window.location.href = "./perfil.php"
 })
