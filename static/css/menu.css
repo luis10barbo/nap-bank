@@ -1,6 +1,6 @@
 .menu{
     z-index: 1;
-    position: sticky;
+    position: relative;
     top: 0;
     display: flex;
     justify-content: space-between;

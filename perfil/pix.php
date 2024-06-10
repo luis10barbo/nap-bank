@@ -5,13 +5,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Área Pix</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../static/css/menu.css">
+  <link rel="stylesheet" href="../static/css/pix2.css">
+  <link rel="stylesheet" href="../static/css/lib/bootstrap.css">
+  
 </head>
-
 <body>
-  <main>
+  <div  class="container container-corpo">
+    <div class="corpo rounded-lg">
+      <header class="menu">
+        <div class="esquerda">
+          
+        </div>
+        <div class="direita">
+          <div id="mySidenav" class="sidenav rounded-lg" style="margin-top:0">
+            <a href="javascript:void(0)" class="closebtn">&times;</a>
+            <a class="active" href="../perfil.php">Perfil</a>
+            <a href="transferencia.php">Transferência</a>
+            <a href="deposito.php">Depósito</a>
+            <a href="emprestimo.php">Emprestimo</a>
+            <a href="#">Cartões</a>
+            <a href="pix.php">PIX</a>
+          </div>
+          <div class="logo">
+            <div class="traco"></div>
+            <div class="traco"></div>
+            <div class="traco"></div>
+          </div>
+        </div>
+      </header>
+        <div id="rowBaixo" class="row">
+          <div class="row">
+            <h2 class="col-md" id="acoes">Área PIX</h2>
+          </div>
+          <div id="botoesAcoes" class="row">
+            <a href="perfil/transferencia.php" id="btnAcoes" class="button-6 col-md rounded">
+              <img class="icone-botao" src="../static/img/perfil/transfer.svg" alt="" />
+              Pagar ou Transferir
+            </a>
+            <a href="perfil/pagar.php" id="btnAcoes" class="button-6 col-md rounded">
+              <img class="icone-botao" src="../static/img/perfil/pay.svg" />Ler QR Code
+            </a>
+            <a href="perfil/deposito.php" id="btnAcoes" class="button-6 col-md rounded">
+              <img class="icone-botao" src="../static/img/perfil/deposit.svg" />Receber
+            </a>
+            <a href="perfil/emprestimo.php" id="btnAcoes" class="button-6 col-md rounded">
+              <img class="icone-botao" src="../static/img/perfil/empres.svg" />Chaves
+            </a>
+          </div>
+          <div class="linhaPix">
+          <h2>Utilizar Código PIX</h2>
+            <div class="linha"></div>
+          </div>
+        </div>
+        <button class="button-6 rounded" role="button" type="button" data-toggle="modal" data-target="#janela">
+          Toque Para Colar o Codigo PIX
+        </button>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="../static/js/lib/jquery.js"></script>
+  <script type="text/javascript" src="../static/js/lib/bootstrap.js"></script>
+
+  <script src="../static/js/menu.js"></script>
+
+<!--
+<main>
     <header class="Titulo">
       <h1>Área PIX</h1>
     </header>
@@ -73,6 +133,6 @@
       <button button id="botão-colar">Colar</button>
     </div>
   </main>
+-->  
 </body>
-
 </html>
