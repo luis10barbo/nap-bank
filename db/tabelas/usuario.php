@@ -6,7 +6,7 @@ class Usuario extends Tabela
     {
         return "usuario";
     }
-    public function inserir(string $email_usuario, string $senha_usuario, string $apelido_usuario, string $nome_usuario, string $cpf_usuario, string $data_nascimento)
+    public function inserir(string $email_usuario, string $senha_usuario, string $apelido_usuario, string $nome_usuario, string $cpf_usuario, string $data_nascimento, float $saldo, float $fatura)
     {
         // INSERT INTO "usuario" VALUES (
         //     0,
@@ -25,12 +25,14 @@ class Usuario extends Tabela
                 "nome_usuario" => $nome_usuario,
                 "cpf_usuario" => $cpf_usuario,
                 "data_nascimento" => $data_nascimento,
+                "saldo" => $saldo,
+                "fatura" => $fatura
             )
         );
     }
     public function buscar(int $id_usuario, bool $incluir_senha = false)
     {
-        $colunas_incluidas = array("id_usuario", "apelido_usuario", "email_usuario", "cpf_usuario", "nome_usuario", "data_nascimento");
+        $colunas_incluidas = array("id_usuario", "apelido_usuario", "email_usuario", "cpf_usuario", "nome_usuario", "data_nascimento", "saldo", "fatura");
         if ($incluir_senha)
             array_push($colunas_incluidas, "senha_usuario");
 
@@ -51,6 +53,11 @@ class Usuario extends Tabela
     public function atualizar(int $id_usuario, string|null $apelido_usuario = null, string|null $email_usuario = null, string|null $senha_usuario = null)
     {
         $this->__atualizar(array("id_usuario" => $id_usuario), array("apelido_usuario" => $apelido_usuario, "email_usuario" => $email_usuario, "senha_usuario" => $senha_usuario));
+    }
+
+    public function atualizar_saldo(float|null $saldo, float|null $fatura)
+    {
+        $this->__atualizar(array("saldo" => $saldo), array("fatura" => $fatura));
     }
 }
 ?>

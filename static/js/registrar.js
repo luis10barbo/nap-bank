@@ -35,5 +35,5 @@ $("#form-registro").on("submit", async (event) => {
         /** @type {string} */
         const respostaString = response;
     }
-    window.location.href = "./perfil.php"
+    window.location.href = "./perfil"
 })
