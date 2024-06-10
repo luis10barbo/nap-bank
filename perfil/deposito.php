@@ -28,7 +28,7 @@ if (empty(adquirir_usuario())) {
         <div class="direita">
           <div id="mySidenav" class="sidenav rounded-lg">
             <a href="javascript:void(0)" class="closebtn">&times;</a>
-            <a class="active" href="../perfil.html">Perfil</a>
+            <a class="active" href="./">Perfil</a>
             <a href="transferencia.php">Transferência</a>
             <a href="deposito.php">Depósito</a>
             <a href="emprestimo.php">Emprestimo</a>

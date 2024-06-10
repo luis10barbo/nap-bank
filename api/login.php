@@ -4,10 +4,12 @@ require_once (__DIR__ . "/../db/database.php");
 require_once (__DIR__ . "/../utils/msg.php");
 require_once (__DIR__ . "/../utils/sessao.php");
 
-
+echo "oi", json_encode($_POST);
 if (!isset($_POST["email"]) || !isset($_POST["senha"]))
     return;
 
+
+echo $email, $senha;
 $email = $_POST["email"];
 $senha = $_POST["senha"];
 
