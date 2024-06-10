@@ -23,7 +23,7 @@ if (empty(adquirir_usuario())) {
     <div class="corpo rounded-lg">
       <header class="menu">
         <div class="esquerda">
-          <h2 id="titulo">Depósito</h2>
+          <h2 id="titulo">Depósitar em sua conta</h2>
         </div>
         <div class="direita">
           <div id="mySidenav" class="sidenav rounded-lg">
