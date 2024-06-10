@@ -12,14 +12,12 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .container-corpo {
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 .corpo{
-    margin-top: auto;
     width: 100%;
-    height: 90%;
     background-color: white;
     padding:40px 50px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -51,6 +49,8 @@ body {
     left: 10px;
 }
 p{
+    margin-top: 27px;
+    height: 50px;
     margin-left: 10px;
 }
 .logoTeste{
@@ -122,18 +122,12 @@ p{
 }
 
 #input_box {
-    display: flexbox;
     flex-direction: column;
-    gap: 25px;
-    border-radius: 5px;
-
 }
 
 .input-field {
     display: flex;
     flex-direction: column;
-    width: 15%;
-
 }
 
 #calculate {
@@ -145,7 +139,7 @@ p{
     font-size: 17px;
     border-radius: 4px;
     cursor: pointer;
-
+    margin-top: 15px;
 }
 
 .input-field input {
@@ -155,7 +149,6 @@ p{
     font-size: 20px;
     text-align: center;
 }
-
 .label-input {
     margin-bottom: 10px;
 
