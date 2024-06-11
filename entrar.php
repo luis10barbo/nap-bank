@@ -54,7 +54,7 @@ if (!empty(adquirir_usuario())) {
       </div>
       <div id="mover" class="row">
         <a id="a" href="registrar.php">Fazer Cadastro</a>
-        <button id="button" class="btn btn-primary">Enviar</button>
+        <button id="button" class="btn btn-primary">Entrar</button>
       </div>
     </form>
   </div>

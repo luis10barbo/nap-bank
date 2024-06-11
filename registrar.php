@@ -78,15 +78,15 @@ if (!empty(adquirir_usuario())) {
           </div>
         </div>
 
-        <div class="row">
+        <div id="ultRow" class="row">
           <div class="form-group col-sm-5">
             <label for="data_nascimento">Data de Nascimento</label>
             <input name="data_nascimento" type="date" class="form-control" />
           </div>
-          <div class="btn">
+          <div id="ultRow1" class="btn">
             <a id="a" href="entrar.php">Ja tem uma conta? Fazer Login</a>
             <button id="botao" type="submit" class="btn btn-primary">
-              Registra
+              Cadastrar
             </button>
           </div>
         </div>
