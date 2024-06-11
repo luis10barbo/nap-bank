@@ -40,13 +40,13 @@
           <div class="col-lg-3">
             <div class="form-group">
               <label for="banco">Banco</label>
-              <input id="banco" name="banco" type="text" class="form-control" placeholder="000-1" />
+              <input id="banco" name="banco" type="text" class="form-control" placeholder="000-1" disabled/>
             </div>
           </div>
           <div class="col-lg-3">
             <div class="form-group">
               <label for="agencia">Agência</label>
-              <input id="agencia" name="agencia" type="text" class="form-control" placeholder="0000-2" />
+              <input id="agencia" name="agencia" type="text" class="form-control" placeholder="0000-2" disabled/>
             </div>
           </div>
           <div class="col-lg-3">
