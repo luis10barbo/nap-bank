@@ -1,8 +1,8 @@
 <?php
-require_once (__DIR__ . "/utils/sessao.php");
+require_once (__DIR__ . "/../utils/sessao.php");
 $usuario = adquirir_usuario();
 if (empty($usuario)) {
-  header("Location: entrar.php");
+  header("Location: ../entrar.php");
   die();
 }
 ?>
@@ -12,9 +12,9 @@ if (empty($usuario)) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="static/css/lib/bootstrap.css" />
-  <link rel="stylesheet" href="static/css/perfil.css" />
-  <title>Document</title>
+  <link rel="stylesheet" href="../static/css/lib/bootstrap.css" />
+  <link rel="stylesheet" href="../static/css/perfil.css" />
+  <title>Perfil</title>
   <script>
     const perfilUsuario = <?php echo json_encode($usuario) ?>;
   </script>
@@ -28,11 +28,11 @@ if (empty($usuario)) {
         <div id="mySidenav" class="sidenav rounded-lg">
           <a href="javascript:void(0)" class="closebtn">&times;</a>
           <a class="active" href="#">Perfil</a>
-          <a href="perfil/transferencia.php">Transferência</a>
-          <a href="perfil/deposito.php">Deposito</a>
-          <a href="perfil/emprestimo.php">Emprestimo</a>
+          <a href="transferencia.php">Transferência</a>
+          <a href="deposito.php">Deposito</a>
+          <a href="emprestimo.php">Emprestimo</a>
           <!-- <a href="#">Cartões</a> -->
-          <a href="perfil/pix.php">PIX</a>
+          <a href="pix.php">PIX</a>
           <a id="botao-sair">Sair</a>
         </div>
         <div class="logo">
@@ -44,7 +44,7 @@ if (empty($usuario)) {
       <section class="grid">
         <div class="row">
           <div id="foto-perfil" class="col-md-4">
-            <img id="imgPerfil" src="static/img/perfil/perfil-de-usuario.png" alt="" />
+            <img id="imgPerfil" src="../static/img/perfil/perfil-de-usuario.png" alt="" />
           </div>
           <div id="info-perfil" class="col-md">
             <div id="info-nome" class="row-md">
@@ -91,18 +91,18 @@ if (empty($usuario)) {
             <h3 class="col-md" id="acoes">Ações Rápidas</h3>
           </div>
           <div id="botoesAcoes" class="row">
-            <a href="perfil/transferencia.php" id="btnAcoes" class="button-6 col-md rounded">
-              <img class="icone-botao" src="static/img/perfil/transfer.svg" alt="" />
+            <a href="transferencia.php" id="btnAcoes" class="button-6 col-md rounded">
+              <img class="icone-botao" src="../static/img/perfil/transfer.svg" alt="" />
               Transferência
             </a>
-            <a href="perfil/pagar.php" id="btnAcoes" class="button-6 col-md rounded">
-              <img class="icone-botao" src="static/img/perfil/pay.svg" />Pagar
+            <a href="pagar.php" id="btnAcoes" class="button-6 col-md rounded">
+              <img class="icone-botao" src="../static/img/perfil/pay.svg" />Pagar
             </a>
-            <a href="perfil/deposito.php" id="btnAcoes" class="button-6 col-md rounded">
-              <img class="icone-botao" src="static/img/perfil/deposit.svg" />Depósito
+            <a href="deposito.php" id="btnAcoes" class="button-6 col-md rounded">
+              <img class="icone-botao" src="../static/img/perfil/deposit.svg" />Depósito
             </a>
-            <a href="perfil/emprestimo.php" id="btnAcoes" class="button-6 col-md rounded">
-              <img class="icone-botao" src="static/img/perfil/empres.svg" />Empréstimos
+            <a href="emprestimo.php" id="btnAcoes" class="button-6 col-md rounded">
+              <img class="icone-botao" src="../static/img/perfil/empres.svg" />Empréstimos
             </a>
             <!-- <a id="btnAcoes" class="button-6 col-md rounded">
               <img class="icone-botao" src="static/img/perfil/credit-card.svg" />Cartões
@@ -113,10 +113,10 @@ if (empty($usuario)) {
     </div>
   </div>
 
-  <script src="static/js/lib/jquery.js"></script>
-  <script src="static/js/lib/bootstrap.js"></script>
-  <script src="static/js/perfil.js"></script>
-  <script src="static/js/menu.js"></script>
+  <script src="../static/js/lib/jquery.js"></script>
+  <script src="../static/js/lib/bootstrap.js"></script>
+  <script src="../static/js/perfil.js"></script>
+  <script src="../static/js/menu.js"></script>
 </body>
 
 </html>

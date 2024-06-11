@@ -32,7 +32,7 @@ abstract class Tabela
             return false;
 
         foreach ($argumentos_values as $nome_argumento => $valor_argumento) {
-            if (!$valor_argumento)
+            if (is_null($valor_argumento))
                 continue;
 
             array_push($values, $nome_argumento);

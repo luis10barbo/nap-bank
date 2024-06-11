@@ -25,5 +25,5 @@ $("#form-entrar").on("submit", async (event) => {
         const respostaString = response;
         console.log(respostaString);
     }
-    window.location.href = "./perfil.php"
+    window.location.href = "./perfil/index.php"
 })

@@ -1,5 +1,5 @@
 <?php
-require_once (__DIR__ . "/utils/sessao.php");
+require_once (__DIR__ . "/../utils/sessao.php");
 if (empty(adquirir_usuario())) {
   header("Location: ../login.php");
   die();
@@ -23,12 +23,12 @@ if (empty(adquirir_usuario())) {
     <div class="corpo rounded-lg">
       <header class="menu">
         <div class="esquerda">
-          <h2 id="titulo">Depósito</h2>
+          <h2 id="titulo">Depósitar em sua conta</h2>
         </div>
         <div class="direita">
           <div id="mySidenav" class="sidenav rounded-lg">
             <a href="javascript:void(0)" class="closebtn">&times;</a>
-            <a class="active" href="../perfil.html">Perfil</a>
+            <a class="active" href="./">Perfil</a>
             <a href="transferencia.php">Transferência</a>
             <a href="deposito.php">Depósito</a>
             <a href="emprestimo.php">Emprestimo</a>

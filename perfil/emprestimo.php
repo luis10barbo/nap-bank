@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projeto Estácio</title>
+  <title>Emprestimo</title>
   <link rel="stylesheet" href="../static/css/emprestimo.css" />
   <link rel="stylesheet" href="../static/css/lib/bootstrap.css">
 
@@ -24,7 +24,7 @@
         <div class="direita">
           <div id="mySidenav" class="sidenav rounded-lg">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a class="active" href="../perfil.php">Perfil</a>
+            <a class="active" href="./">Perfil</a>
             <a href="transferencia.php">Transferência</a>
             <a href="deposito.php">Depósito</a>
             <a href="emprestimo.php">Emprestimo</a>

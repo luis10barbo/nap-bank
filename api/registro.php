@@ -33,7 +33,7 @@ if ($resultado) {
 
 $hash_senha = password_hash($senha, PASSWORD_DEFAULT);
 
-Database::usuario()->inserir($email, $hash_senha, $apelido, $nome, $cpf, $data_nascimento);
+Database::usuario()->inserir($email, $hash_senha, $apelido, $nome, $cpf, $data_nascimento, 0, 0);
 
 $resultado = Database::usuario()->buscar_email($email);
 if (!$resultado)

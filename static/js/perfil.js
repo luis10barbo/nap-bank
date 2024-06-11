@@ -1,5 +1,7 @@
-let saldo = 30.00;
-let fatura = 1000.00;
+// @ts-ignore
+let saldo = perfilUsuario.saldo;
+// @ts-ignore
+let fatura = perfilUsuario.fatura;
 let saldoVisivel = false;
 
 $("#btnSaldo").click(() => {
