@@ -1,5 +1,5 @@
 $(".logo").on("click", () => {
-  $("#mySidenav").css({ "width": "205px" })
+  $("#mySidenav").css({ "width": "230px" })
   $(".logo").css({ "boxShadow": "none" })
   $(".logo:hover").css({ "transition": "none" })
   $(".logo:hover").css({ "transform": "none" })
