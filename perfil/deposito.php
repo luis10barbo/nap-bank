@@ -32,7 +32,7 @@ if (empty(adquirir_usuario())) {
             <a href="transferencia.php">Transferência</a>
             <a href="deposito.php">Depósito</a>
             <a href="emprestimo.php">Emprestimo</a>
-            <a href="#">Cartões</a>
+            <!--<a href="#">Cartões</a> -->
             <a href="pix.php">PIX</a>
           </div>
           <div class="logo">
@@ -85,6 +85,7 @@ if (empty(adquirir_usuario())) {
         <button class="button-6 rounded" role="button" type="button" data-toggle="modal" data-target="#janela">
           Depósito
         </button>
+        <br>
         <p>Você passara a ter R$ <span>X</span> em sua conta NAP</p>
       </div>
     </div>

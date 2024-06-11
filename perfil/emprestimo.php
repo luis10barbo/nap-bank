@@ -28,7 +28,7 @@
             <a href="transferencia.php">Transferência</a>
             <a href="deposito.php">Depósito</a>
             <a href="emprestimo.php">Emprestimo</a>
-            <a href="#">Cartões</a>
+            <!--<a href="#">Cartões</a> -->
             <a href="pix.php">PIX</a>
           </div>
           <div class="logo" onclick="openNav()">

@@ -3,19 +3,12 @@ body {
     height: 100vh;
     background: linear-gradient(-110deg, #9F6DD2, #FF00C7);
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 .container-corpo {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* overflow: auto;
-    margin: 0;
-    width: 100%;
-    max-width: 100%; */
 }
 .corpo {
     overflow-y: auto;
@@ -26,7 +19,6 @@ body {
     margin-right:auto;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-
 .menu {
     z-index: 1;
     position: sticky;
@@ -39,7 +31,6 @@ body {
     flex-direction: row;
     margin-bottom: 50px;
 }
-
 .logo {
     cursor: pointer;
     width: 56px;
@@ -53,13 +44,10 @@ body {
     justify-content: right;
     align-items: center;
 }
-
 .logo:hover {
     transition: all 250ms;
     transform: scale(1.07);
-
 }
-
 .traco {
     width: 40px;
     height: 5px;
@@ -68,11 +56,9 @@ body {
     border-radius: 3px;
     left: 10px;
 }
-
 p {
     margin-left: 10px;
 }
-
 .logoTeste {
     text-align: center;
     width: 70px;
@@ -81,7 +67,6 @@ p {
     border-radius: 50%;
     color: white;
 }
-
 .sidenav {
     margin-right: -4px;
     margin-top: 340px;
@@ -94,7 +79,6 @@ p {
     padding-top: 60px;
     transition: 0.5s;
 }
-
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -103,12 +87,10 @@ p {
     display: block;
     transition: 0.3s;
 }
-
 .sidenav a:hover {
     color: #f1f1f1;
     text-decoration: underline;
 }
-
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -116,7 +98,6 @@ p {
     font-size: 36px;
     margin-left: 50px;
 }
-
 #imgPerfil {
     width: 200px;
     height: 200px;
@@ -148,77 +129,63 @@ p {
     vertical-align: baseline;
     width: auto;
 }
-
 .button-6:hover,
 .button-6:focus {
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     background: linear-gradient(-110deg, #9F6DD2, #FF00C7);
 }
-
 .button-6:hover {
     transition: all 250ms;
     transform: scale(1.05);
     background: linear-gradient(-110deg, #9F6DD2, #FF00C7);
     border-radius: 3px;
-
 }
-
 .button-6:active {
     background-color: #F0F0F1;
     border-color: rgba(0, 0, 0, 0.15);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(0);
-
 }
-
 #foto-perfil {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
 }
-
 #info-nome {
     display: block;
     margin-bottom: 30px;
 }
-
 #info-conta {
     display: flex;
     margin-bottom: 30px;
     margin-left: -15px;
 }
-
 #info-saldo,
 #info-fatura {
     background-color: #F4F4F4;
     margin: 10px;
     padding: 15px;
 }
-
 .baixo {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 #info-valores {
     display: flex;
     justify-content: left;
     align-items: center;
 }
-
 #rowBaixo {
     margin-top: 30px;
     flex-direction: column;
 }
-
 #acoes {
     margin-left: 80px;
     margin-bottom: 30px;
 }
-
 #btnAcoes {
     display: flex;
     flex-direction: column;
@@ -227,7 +194,6 @@ p {
     min-width: 150px;
     height: 150px;
 }
-
 #botoesAcoes {
     display: flex;
     gap:15px;
@@ -247,33 +213,24 @@ img {
     margin-bottom: 10px;
 }
 
-.icone-botao {
-    /* filter: invert(100%) sepia(10%) saturate(7499%) hue-rotate(278deg) brightness(115%) contrast(103%); */
-}
-
-
 @media (max-width:991px) {
     body {
         height: 100%;
     }
-
     .corpo {
         height: 100%;
         margin: 30px 0;
         padding: 30px;
     }
-
     .logo:hover {
         transition: none;
         transform: none;
     }
-
     #info-saldo,
     #info-fatura {
         min-width: 240px;
         max-width: 240px;
     }
-
     #info-valores {
         display: flex;
         justify-content: left;
