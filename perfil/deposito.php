@@ -1,5 +1,5 @@
 <?php
-require_once (__DIR__ . "/utils/sessao.php");
+require_once (__DIR__ . "/../utils/sessao.php");
 if (empty(adquirir_usuario())) {
   header("Location: ../login.php");
   die();
