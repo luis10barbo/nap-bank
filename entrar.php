@@ -46,11 +46,11 @@ if (!empty(adquirir_usuario())) {
     <form id="form-entrar">
       <div class="form-group">
         <label for="email">Email</label>
-        <input name="email" type="email" class="form-control" id="email" placeholder="Digite seu email" />
+        <input required name="email" type="email" class="form-control" id="email" placeholder="Digite seu email" />
       </div>
       <div class="form-group">
         <label for="senha">Senha</label>
-        <input name="senha" type="password" class="form-control" id="senha" placeholder="Digite sua senha" />
+        <input required name="senha" type="password" class="form-control" id="senha" placeholder="Digite sua senha" />
       </div>
       <div id="mover" class="row">
         <a id="a" href="registrar.php">Fazer Cadastro</a>
