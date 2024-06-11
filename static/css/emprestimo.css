@@ -141,14 +141,6 @@ p{
     cursor: pointer;
     margin-top: 15px;
 }
-
-.input-field input {
-    background-color: #ede4e4;
-    border: none;
-    border-radius: 3px;
-    font-size: 20px;
-    text-align: center;
-}
 .label-input {
     margin-bottom: 10px;
 
