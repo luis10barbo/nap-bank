@@ -42,31 +42,7 @@ body{
     padding: 20px;
   }
 
-.logo{
-    width: 56px;
-    height: 56px;
-    background: linear-gradient(-110deg, #9F6DD2, #FF00C7);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    border-radius: 5px;
-    transition: all 250ms;
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: center;
-}
-.logo:hover{
-  transition: all 250ms;
-  transform: scale(1.07);
-  
-}
-.traco{
-    width: 40px;
-    height: 5px;
-    background-color: white;
-    margin-top: 10px;
-    border-radius: 3px;
-    left: 10px;
-}
+
 p{
     margin-left: 10px;
 }
