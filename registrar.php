@@ -16,12 +16,13 @@ if (!empty(adquirir_usuario())) {
   <link rel="stylesheet" href="static/css/lib/bootstrap.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="static/css/geral.css">
   <link href="https: //fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
   <title>Registrar NAP</title>
 </head>
 
 <body>
-  <div class="container">
+  <div class="container container-corpo">
 
     <div class="modal fade" id="janela" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true">
@@ -83,12 +84,15 @@ if (!empty(adquirir_usuario())) {
             <label for="data_nascimento">Data de Nascimento</label>
             <input name="data_nascimento" type="date" class="form-control" />
           </div>
-          <div class="btn">
-            <a id="a" href="entrar.php">Ja tem uma conta? Fazer Login</a>
-            <button id="botao" type="submit" class="btn btn-primary">
-              Registra
-            </button>
-          </div>
+
+        </div>
+        <div class="row row-login">
+
+          <a href="entrar.php">Ja tem uma conta? Fazer Login</a>
+          <button id="botao" type="submit" class="btn btn-primary">
+            Registra
+          </button>
+
         </div>
       </form>
     </div>
