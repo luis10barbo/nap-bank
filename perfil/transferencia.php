@@ -38,7 +38,7 @@
       </header>
 
       <form class="grid">
-        <div class="row justify-content-between ">
+        <!-- <div class="row justify-content-between ">
           <div class="col-lg-3">
             <div class="form-group">
               <label for="banco">Banco</label>
@@ -57,7 +57,7 @@
               <input id="conta" name="conta" type="text" class="form-control" placeholder="0000-33" />
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="row justify-content-between">
           <div class="col-lg-3">
             <div class="form-group">
