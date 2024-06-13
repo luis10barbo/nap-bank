@@ -1,5 +1,21 @@
 // @ts-ignore
 // $("#janela").modal();
+$("#valor").on("change", (event) => {
+    const value = $("#valor").val();
+    if (value === undefined  || typeof value !== "string") {
+        return;
+    }
+    
+    const valueNumber = Number.parseFloat(value);
+    if (value === "" || valueNumber < 0) {
+        // @ts-ignore
+        $("#novo-valor").text(usuario.saldo);
+        return;
+    }
+    // @ts-ignore
+    $("#novo-valor").text(usuario.saldo + valueNumber);
+})
+
 $("#form-depositar").on("submit", async (event) => {
     event.preventDefault();
     $("#qrcode").hide();

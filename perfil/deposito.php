@@ -1,6 +1,7 @@
 <?php
 require_once (__DIR__ . "/../utils/sessao.php");
-if (empty(adquirir_usuario())) {
+$usuario = adquirir_usuario();
+if (empty($usuario)) {
   header("Location: ../login.php");
   die();
 }
@@ -16,7 +17,9 @@ if (empty(adquirir_usuario())) {
   <link rel="stylesheet" href="../static/css/lib/bootstrap.css" />
   <link rel="stylesheet" href="../static/css/menu.css">
   <link rel="stylesheet" href="../static/css/geral.css">
-
+  <script>
+    const usuario = <?php echo json_encode($usuario); ?>
+  </script>
 
   <title>Depósito</title>
 </head>
@@ -140,7 +143,7 @@ if (empty(adquirir_usuario())) {
           <button class="button-6 rounded">
             Depósito
           </button>
-          <p>Você passara a ter R$ <span>X</span> em sua conta NAP</p>
+          <p>Você passara a ter R$ <span id="novo-valor"><?php echo $usuario["saldo"] ?></span> em sua conta NAP</p>
         </div>
       </form>
 
