@@ -17,7 +17,18 @@ CREATE TABLE IF NOT EXISTS "chave_pix" (
 	chave VARCHAR(256) PRIMARY KEY,
 	id_usuario INTEGER REFERENCES usuario(idUsuario)  
 );
-
+CREATE TABLE IF NOT EXISTS "historico_transferencia" (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	id_remetente INTEGER REFERENCES usuario(idUsuario),
+	id_destinatario INTEGER REFERENCES usuario(idUsuario),
+	banco_destinatario varchar(5),
+	agencia_destinatario varchar(6),
+	conta_destinatario varchar(7),
+	cpf_destinatario varchar(14),
+	data_transferencia varchar(10),
+	valor REAL,
+	mensagem VARCHAR(256)
+);
 INSERT INTO "usuario" VALUES (
 	1,
 	"luis10barbo",

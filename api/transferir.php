@@ -58,7 +58,9 @@ Database::usuario()->atualizar_saldo($usuario["id_usuario"], $usuario["saldo"] -
 if ($transferencia_externa !== false) {
     Database::usuario()->atualizar_saldo($destinatario["id_usuario"], $destinatario["saldo"] + $valor);
     echo criar_sucesso("Voce transferiu R$" . $valor . " para " . $destinatario["nome_usuario"] . "!");
+    Database::historico_transferencia()->criar_interna($usuario["id_usuario"], $destinatario["id_usuario"], $destinatario["cpf_usuario"], $valor, "", "");
 } else {
     echo criar_sucesso("Voce transferiu R$" . $valor . " para cpf: " . $cpf . ", banco: " . $_POST["banco"] . ", agencia: " . $_POST["agencia"] . ", conta: " . $_POST["conta"] . "!");
+    Database::historico_transferencia()->criar_externa($usuario["id_usuario"], $destinatario["id_usuario"], $_POST["banco"], $_POST["agencia"], $_POST["conta"], $destinatario["cpf_usuario"], $valor, "", "");
 
 }

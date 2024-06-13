@@ -34,5 +34,6 @@ if ($chaves === false) {
 $chave = Database::chave()->buscar_usuario($usuario["id_usuario"]);
 // echo json_encode($chave);
 // echo json_encode(geraPix($chave["chave"], "", $valor));
+Database::historico_transferencia()->criar_interna(null, $usuario["id_usuario"], $usuario["cpf_usuario"], $valor, null, null);
 Database::usuario()->atualizar_saldo($usuario["id_usuario"], $usuario["saldo"] + $valor);
 echo criar_sucesso("Deposito de R$" . $valor . " efetuado com sucesso!");

@@ -2,6 +2,7 @@
 require_once (__DIR__ . "/tabelas/sessao.php");
 require_once (__DIR__ . "/tabelas/usuario.php");
 require_once (__DIR__ . "/tabelas/chave_pix.php");
+require_once (__DIR__ . "/tabelas/historico_transferencia.php");
 
 $diretorio_db = __DIR__ . "/database.db";
 
@@ -12,6 +13,7 @@ class Database
     private static Usuario $usuario;
 
     private static ChavePix $chave;
+    private static HistoricoTransferencia $historicoTransferencia;
 
     private function __construct()
     {
@@ -91,5 +93,13 @@ class Database
             self::$chave = new ChavePix($db);
         }
         return self::$chave;
+    }
+    public static function historico_transferencia()
+    {
+        $db = self::adquirir_db();
+        if (!isset(self::$historicoTransferencia)) {
+            self::$historicoTransferencia = new HistoricoTransferencia($db);
+        }
+        return self::$historicoTransferencia;
     }
 }
