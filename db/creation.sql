@@ -13,12 +13,17 @@ CREATE TABLE IF NOT EXISTS "sessao" (
 	id_sessao VARCHAR(22) PRIMARY KEY,
 	id_usuario INTEGER REFERENCES usuario(idUsuario)
 );
+CREATE TABLE IF NOT EXISTS "chave_pix" (
+	chave VARCHAR(256) PRIMARY KEY,
+	id_usuario INTEGER REFERENCES usuario(idUsuario)  
+);
+
 INSERT INTO "usuario" VALUES (
 	0,
-	"teste",
-	"teste@teste.com",
-	"$2y$10$E4cbbX4MSKT7vpEBFpJO4.H9lM08/KrkP90HbKUv0He5Efcx/VKFu", /* senha: teste */
-	"Teste da Silva Nunes",
+	"luis10barbo",
+	"luis10barbo2020@gmail.com",
+	"$2y$10$SK9cF9CQWVIr5tFKdaPAtutaycDxKKqXq2sPkhew9Pvz.g3UWXSia", /* senha: 123 */
+	"Luis Eduardo Nunes",
 	"111.222.333-44",
 	"01/01/1990",
 	0,

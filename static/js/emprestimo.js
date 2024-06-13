@@ -31,6 +31,5 @@ function mascara(valor) {
   valorAlterado = valorAlterado.replace(/\D/g, "");
   valorAlterado = valorAlterado.replace(/(\d+)(\d{2})$/, "$1,$2");
   valorAlterado = valorAlterado.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
-  valorAlterado = "R$ " + valorAlterado;
   valor.value = valorAlterado;
 }

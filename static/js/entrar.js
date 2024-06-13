@@ -1,7 +1,6 @@
 $("#form-entrar").on("submit", async (event) => {
     event.preventDefault();
     const entries = Object.fromEntries(new FormData(/**@type {HTMLFormElement} */ ($("#form-entrar")[0])).entries());
-    console.log(entries);
     // TODO: descomentar
     // for (let entry in entries) {
     //     if (!entries[entry]) {

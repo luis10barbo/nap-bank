@@ -53,6 +53,7 @@ abstract class Tabela
         $string_where = " WHERE " . join(" AND ", $where);
         $string_sql = "SELECT " . ($argumentos_select ? join(", ", $argumentos_select) : "*") . " FROM " . $this->nome_tabela() . $string_where;
         $comando = self::$db->prepare($string_sql);
+        // echo ($string_sql);
         $comando->execute($argumentos_where_filtrado);
         return $comando->fetch(PDO::FETCH_ASSOC);
     }
@@ -85,7 +86,7 @@ abstract class Tabela
         $string_sql = "UPDATE " . $this->nome_tabela() . " SET " . $string_set . $string_where;
 
         $comando = self::$db->prepare($string_sql);
-        var_dump($argumentos_set);
+        // var_dump($argumentos_set);
         return $comando->execute(array_merge($argumentos_set, $argumentos_where_filtrado));
     }
 }

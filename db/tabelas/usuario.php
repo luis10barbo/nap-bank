@@ -55,9 +55,9 @@ class Usuario extends Tabela
         $this->__atualizar(array("id_usuario" => $id_usuario), array("apelido_usuario" => $apelido_usuario, "email_usuario" => $email_usuario, "senha_usuario" => $senha_usuario));
     }
 
-    public function atualizar_saldo(float|null $saldo, float|null $fatura)
+    public function atualizar_saldo(int $id_usuario, float|null $saldo, float|null $fatura)
     {
-        $this->__atualizar(array("saldo" => $saldo), array("fatura" => $fatura));
+        $this->__atualizar(array("id_usuario" => $id_usuario), array("saldo" => $saldo, "fatura" => $fatura));
     }
 }
 ?>

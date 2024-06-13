@@ -15,6 +15,12 @@
 .corpo {
     height: 90%;
 }
+.modal-body {
+    gap:1rem;
+}
+.botao-modal {
+    margin-top:0 !important;
+}
 @media (max-width:991px) {
     .baixo{
         flex-direction: column;

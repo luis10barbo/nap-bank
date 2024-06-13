@@ -34,9 +34,8 @@ document.getElementById('conta').addEventListener('input', function (e) {
 
 function mascara(valor) {
   var valorAlterado = valor.value;
-  valorAlterado = valorAlterado.replace(/\D/g, "");
-  valorAlterado = valorAlterado.replace(/(\d+)(\d{2})$/, "$1,$2");
-  valorAlterado = valorAlterado.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
-  valorAlterado = "R$ " + valorAlterado;
+  // valorAlterado = valorAlterado.replace(/\D/g, "");
+  // valorAlterado = valorAlterado.replace(/(\d+)(\d{2})$/, "$1,$2");
+  // valorAlterado = valorAlterado.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
   valor.value = valorAlterado;
 }
