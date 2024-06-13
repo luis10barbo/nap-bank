@@ -34,7 +34,7 @@ if (empty($usuario)) {
           <a href="emprestimo.php">Emprestimo</a>
           <!-- <a href="#">Cartões</a> -->
           <a href="pix.php">PIX</a>
-          <a id="botao-sair">Sair</a>
+          <a href="javascript:void(0)" id="botao-sair">Sair</a>
         </div>
         <div class="logo">
           <div class="traco"></div>
