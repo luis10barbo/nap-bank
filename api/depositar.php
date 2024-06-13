@@ -28,7 +28,7 @@ if ($valor <= 0) {
 
 $chaves = Database::chave()->buscar_usuario($usuario["id_usuario"]);
 if ($chaves === false) {
-    Database::chave()->criar($usuario["id_usuario"]);
+    Database::chave()->criar($usuario["id_usuario"], null);
 }
 
 $chave = Database::chave()->buscar_usuario($usuario["id_usuario"]);

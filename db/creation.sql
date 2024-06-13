@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS "sessao" (
 );
 CREATE TABLE IF NOT EXISTS "chave_pix" (
 	chave VARCHAR(256) PRIMARY KEY,
+	tipo VARCHAR(7),
 	id_usuario INTEGER REFERENCES usuario(idUsuario)  
 );
 CREATE TABLE IF NOT EXISTS "historico_transferencia" (
@@ -25,6 +26,7 @@ CREATE TABLE IF NOT EXISTS "historico_transferencia" (
 	agencia_destinatario varchar(6),
 	conta_destinatario varchar(7),
 	cpf_destinatario varchar(14),
+	chave_destinatario varchar(256),
 	data_transferencia varchar(10),
 	valor REAL,
 	mensagem VARCHAR(256)

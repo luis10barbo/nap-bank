@@ -78,13 +78,20 @@ if ($tipo_transferencia === "TED") {
         Database::historico_transferencia()->criar_interna($usuario["id_usuario"], $destinatario["id_usuario"], $destinatario["cpf_usuario"], $valor, "", "");
     } else {
         echo criar_sucesso("Voce transferiu R$" . $valor . " para cpf: " . $cpf . ", banco: " . $_POST["banco"] . ", agencia: " . $_POST["agencia"] . ", conta: " . $_POST["conta"] . "!");
-        Database::historico_transferencia()->criar_externa($usuario["id_usuario"], $destinatario["id_usuario"], $_POST["banco"], $_POST["agencia"], $_POST["conta"], $destinatario["cpf_usuario"], $valor, "", "");
+        Database::historico_transferencia()->criar_externa($usuario["id_usuario"], $_POST["banco"], $_POST["agencia"], $_POST["conta"], $destinatario["cpf_usuario"], $valor, "", "");
 
     }
 } else {
 
     Database::usuario()->atualizar_saldo($destinatario["id_usuario"], $destinatario["saldo"] + $valor);
     echo criar_sucesso("Voce transferiu R$" . $valor . " para " . $destinatario["nome_usuario"] . "!");
-    Database::historico_transferencia()->criar_interna($usuario["id_usuario"], $destinatario["id_usuario"], $destinatario["cpf_usuario"], $valor, "", "");
+    if ($transferencia_externa !== false) {
+        // interna
+        Database::historico_transferencia()->criar_pix_interno($usuario["id_usuario"], $destinatario["id_usuario"], $_POST["chave"], $valor, "", "");
 
+    } else {
+        Database::historico_transferencia()->criar_pix_externo($usuario["id_usuario"], $_POST["chave"], $valor, "", "");
+
+
+    }
 }
