@@ -11,14 +11,13 @@ $("#form-depositar").on("submit", async (event) => {
 
 
     const entries = Object.fromEntries(new FormData(/**@type {HTMLFormElement} */ ($("#form-depositar")[0])).entries());
-    console.log(entries);
-    
+    $("#texto-modal").text("Processando transação...");
 
-    if (entries.tipo === "pix") {
-        $("#texto-modal").text("Gerando QRCode PIX...");
-    } else {
-        $("#texto-modal").text("Gerando Boleto...");
-    }
+    // if (entries.tipo === "pix") {
+    //     $("#texto-modal").text("Gerando QRCode PIX...");
+    // } else {
+    //     $("#texto-modal").text("Gerando Boleto...");
+    // }
     // @ts-ignore
     const modal = $("#janela").modal("toggle");
     const response = JSON.parse(await $.ajax({method: "POST", data:entries, url:"/nap/api/depositar.php"}));
