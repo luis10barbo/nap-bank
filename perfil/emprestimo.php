@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../static/css/emprestimo.css" />
   <link rel="stylesheet" href="../static/css/lib/bootstrap.css">
   <link rel="stylesheet" href="../static/css/menu.css">
+  <link rel="stylesheet" href="../static/css/geral.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,12 +49,12 @@
         <div id="input_box" class="row">
           <div class="input-field col-sm-3  form-group">
             <label for="value" class="label-input">Valor:</label>
-            <input type="text" id="value" onkeyup="mascara(this)" placeholder="Digite o valor" />
+            <input type="text" id="value" class="form-control" onkeyup="mascara(this)" placeholder="Digite o valor" />
           </div>
 
           <div class="input-field col-sm-3 form-group">
             <label for="fee" class="label-input">Parcelas:</label>
-            <input type="number" id="fee" min="1" max="12" placeholder="Até 12 meses" />
+            <input type="number" id="fee" min="1" max="12" class=" form-control" placeholder="Até 12 meses" />
           </div>
 
           <p>Você passará a ter um emprestimo no valor total de<span class="vermelho" id="total"> R$ 0,00 </span></p>

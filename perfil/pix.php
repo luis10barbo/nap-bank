@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../static/css/menu.css">
   <link rel="stylesheet" href="../static/css/pix2.css">
   <link rel="stylesheet" href="../static/css/lib/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/geral.css">
 
 </head>
 

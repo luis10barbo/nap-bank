@@ -1,1 +1,6 @@
 a:hover {color: #0067d6 !important;}
+input {
+    background-color: #F3F3F3 !important;
+    color: black !important;
+    border: none !important;
+}
