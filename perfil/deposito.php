@@ -85,12 +85,15 @@ if (empty($usuario)) {
         <div class="direita">
           <div id="mySidenav" class="sidenav rounded-lg">
             <a href="javascript:void(0)" class="closebtn">&times;</a>
-            <a class="active" href="./">Perfil</a>
+            <a class="active" href="index.php">Perfil</a>
             <a href="transferencia.php">Transferência</a>
-            <a href="deposito.php">Depósito</a>
-            <a href="emprestimo.php">Emprestimo</a>
-            <a href="#">Cartões</a>
+            <a href="#">Deposito</a>
+            <!-- <a href="emprestimo.php">Emprestimo</a> -->
+            <a href="historico.php">Historico</a>
+
+            <!-- <a href="#">Cartões</a> -->
             <a href="pix.php">PIX</a>
+            <a href="javascript:void(0)" id="botao-sair">Sair</a>
           </div>
           <div class="logo">
             <div class="traco"></div>

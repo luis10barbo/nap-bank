@@ -52,7 +52,7 @@ if ($usuario["saldo"] < $valor) {
 $destinatario = null;
 if ($tipo_transferencia === "TED") {
     $destinatario = Database::usuario()->buscar_cpf($cpf);
-    if (empty($destinatario)) {
+    if (empty($destinatario) && $transferencia_externa !== false) {
         echo criar_erro("Usuario com cpf " . $cpf . " nao existe!");
         die();
     }
@@ -73,12 +73,16 @@ if ($tipo_transferencia === "TED") {
 Database::usuario()->atualizar_saldo($usuario["id_usuario"], $usuario["saldo"] - $valor);
 if ($tipo_transferencia === "TED") {
     if ($transferencia_externa !== false) {
+        if ($usuario["id_usuario"] === $destinatario["id_destinatario"]) {
+            echo criar_erro("Voce nao pode enviar uma transferencia para si mesmo");
+            die();
+        }
         Database::usuario()->atualizar_saldo($destinatario["id_usuario"], $destinatario["saldo"] + $valor);
         echo criar_sucesso("Voce transferiu R$" . $valor . " para " . $destinatario["nome_usuario"] . "!");
         Database::historico_transferencia()->criar_interna($usuario["id_usuario"], $destinatario["id_usuario"], $destinatario["cpf_usuario"], $valor, "", "");
     } else {
         echo criar_sucesso("Voce transferiu R$" . $valor . " para cpf: " . $cpf . ", banco: " . $_POST["banco"] . ", agencia: " . $_POST["agencia"] . ", conta: " . $_POST["conta"] . "!");
-        Database::historico_transferencia()->criar_externa($usuario["id_usuario"], $_POST["banco"], $_POST["agencia"], $_POST["conta"], $destinatario["cpf_usuario"], $valor, "", "");
+        Database::historico_transferencia()->criar_externa($usuario["id_usuario"], $_POST["banco"], $_POST["agencia"], $_POST["conta"], $cpf, $valor, "", "");
 
     }
 } else {
@@ -86,6 +90,10 @@ if ($tipo_transferencia === "TED") {
     Database::usuario()->atualizar_saldo($destinatario["id_usuario"], $destinatario["saldo"] + $valor);
     echo criar_sucesso("Voce transferiu R$" . $valor . " para " . $destinatario["nome_usuario"] . "!");
     if ($transferencia_externa !== false) {
+        if ($usuario["id_usuario"] === $destinatario["id_destinatario"]) {
+            echo criar_erro("Voce nao pode enviar uma transferencia para si mesmo");
+            die();
+        }
         // interna
         Database::historico_transferencia()->criar_pix_interno($usuario["id_usuario"], $destinatario["id_usuario"], $_POST["chave"], $valor, "", "");
 

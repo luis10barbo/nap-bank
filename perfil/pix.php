@@ -22,12 +22,15 @@
         <div class="direita">
           <div id="mySidenav" class="sidenav rounded-lg" style="margin-top:0">
             <a href="javascript:void(0)" class="closebtn">&times;</a>
-            <a class="active" href="./">Perfil</a>
+            <a class="active" href="index.php">Perfil</a>
             <a href="transferencia.php">Transferência</a>
-            <a href="deposito.php">Depósito</a>
-            <a href="emprestimo.php">Emprestimo</a>
+            <a href="deposito.php">Deposito</a>
+            <!-- <a href="emprestimo.php">Emprestimo</a> -->
+            <a href="historico.php">Historico</a>
+
             <!-- <a href="#">Cartões</a> -->
             <a href="pix.php">PIX</a>
+            <a href="javascript:void(0)" id="botao-sair">Sair</a>
           </div>
           <div class="logo">
             <div class="traco"></div>
@@ -41,11 +44,11 @@
           <h2 class="col-md" id="acoes">Área PIX</h2>
         </div>
         <div id="botoesAcoes" class="row">
-          <a href="perfil/transferencia.php" id="btnAcoes" class="button-6 col-md rounded">
+          <a href="transferencia.php" id="btnAcoes" class="button-6 col-md rounded">
             <img class="icone-botao" src="../static/img/perfil/transfer.svg" alt="" />
             Pagar ou Transferir
           </a>
-          <a href="perfil/pagar.php" id="btnAcoes" class="button-6 col-md rounded">
+          <!-- <a href="perfil/pagar.php" id="btnAcoes" class="button-6 col-md rounded">
             <img class="icone-botao" src="../static/img/perfil/pay.svg" />Ler QR Code
           </a>
           <a href="perfil/deposito.php" id="btnAcoes" class="button-6 col-md rounded">
@@ -53,7 +56,7 @@
           </a>
           <a href="perfil/emprestimo.php" id="btnAcoes" class="button-6 col-md rounded">
             <img class="icone-botao" src="../static/img/perfil/empres.svg" />Chaves
-          </a>
+          </a> -->
         </div>
         <div class="linhaPix">
           <h2>Utilizar Código PIX</h2>

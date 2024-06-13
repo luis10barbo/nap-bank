@@ -195,6 +195,15 @@ img {
     /* filter: invert(100%) sepia(10%) saturate(7499%) hue-rotate(278deg) brightness(115%) contrast(103%); */
 }
 
+.grid-historico {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:1rem;
+    background-color: #f0f0f0;
+    padding:1rem;
+    border-radius: 1rem;
+}
+
 
 @media (max-width:991px) {
     body {

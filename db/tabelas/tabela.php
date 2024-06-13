@@ -43,6 +43,20 @@ abstract class Tabela
         $comando = self::$db->prepare($string_sql);
         return $comando->execute($argumentos_values_filtrados);
     }
+    public function __buscarTodas(array $argumentos_where, array|null $argumentos_select = null)
+    {
+        $where = $this->gerar_arg_igual_sql($argumentos_where);
+        $argumentos_where_filtrado = array_filtrar_null($argumentos_where);
+        if (empty($where))
+            return false;
+
+        $string_where = " WHERE " . join(" AND ", $where);
+        $string_sql = "SELECT " . ($argumentos_select ? join(", ", $argumentos_select) : "*") . " FROM " . $this->nome_tabela() . $string_where;
+        $comando = self::$db->prepare($string_sql);
+        // echo ($string_sql);
+        $comando->execute($argumentos_where_filtrado);
+        return $comando->fetchAll(PDO::FETCH_ASSOC);
+    }
     public function __buscar(array $argumentos_where, array|null $argumentos_select = null)
     {
         $where = $this->gerar_arg_igual_sql($argumentos_where);

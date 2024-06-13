@@ -76,14 +76,19 @@ class HistoricoTransferencia extends Tabela
         );
     }
 
-    public function buscar_chave(string $chave)
+    public function buscar_recebidos(int $id_usuario)
     {
-        return $this->__buscar(array("chave" => $chave));
+        return $this->__buscarTodas(array("id_destinatario" => $id_usuario));
     }
 
+    public function buscar_enviados(int $id_usuario)
+    {
+        return $this->__buscarTodas(array("id_remetente" => $id_usuario));
+
+    }
     public function buscar_usuario(int $id_usuario)
     {
-        return $this->__buscar(array("id_usuario" => $id_usuario));
+        return $this->__buscarTodas(array("id_usuario" => $id_usuario));
     }
 
 

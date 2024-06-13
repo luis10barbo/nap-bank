@@ -31,7 +31,9 @@ if (empty($usuario)) {
           <a class="active" href="#">Perfil</a>
           <a href="transferencia.php">Transferência</a>
           <a href="deposito.php">Deposito</a>
-          <a href="emprestimo.php">Emprestimo</a>
+          <!-- <a href="emprestimo.php">Emprestimo</a> -->
+          <a href="historico.php">Historico</a>
+
           <!-- <a href="#">Cartões</a> -->
           <a href="pix.php">PIX</a>
           <a href="javascript:void(0)" id="botao-sair">Sair</a>
@@ -74,16 +76,7 @@ if (empty($usuario)) {
                 </div>
               </div>
 
-              <div id="info-fatura" class="col-md-5 rounded-lg">
-                <h5>Fatura Atual</h5>
-                <div class="baixo">
-                  <label id="fatu">●●●●●</label>
-                  <button id="btnFatu" class="button-6 rounded" role="button" type="button" data-toggle="modal"
-                    data-target="#janela" style="margin: 0">
-                    Mostrar
-                  </button>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
