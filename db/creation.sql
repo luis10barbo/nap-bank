@@ -19,12 +19,24 @@ CREATE TABLE IF NOT EXISTS "chave_pix" (
 );
 
 INSERT INTO "usuario" VALUES (
-	0,
+	1,
 	"luis10barbo",
 	"luis10barbo2020@gmail.com",
 	"$2y$10$SK9cF9CQWVIr5tFKdaPAtutaycDxKKqXq2sPkhew9Pvz.g3UWXSia", /* senha: 123 */
 	"Luis Eduardo Nunes",
 	"111.222.333-44",
+	"01/01/1990",
+	0,
+	0
+);
+
+INSERT INTO "usuario" VALUES (
+	2,
+	"teste",
+	"teste@gmail.com",
+	"$2y$10$SK9cF9CQWVIr5tFKdaPAtutaycDxKKqXq2sPkhew9Pvz.g3UWXSia", /* senha: 123 */
+	"Teste da Silva Junior",
+	"113.752.244-50",
 	"01/01/1990",
 	0,
 	0

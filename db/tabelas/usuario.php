@@ -46,6 +46,10 @@ class Usuario extends Tabela
     {
         return $this->__buscar(array("apelido_usuario" => $apelido_usuario));
     }
+    public function buscar_cpf(string $cpf_usuario)
+    {
+        return $this->__buscar(array("cpf_usuario" => $cpf_usuario));
+    }
     private function remover(int $id_usuario)
     {
         $this->__remover(array("id_usuario" => $id_usuario));

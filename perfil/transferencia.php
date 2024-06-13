@@ -13,6 +13,57 @@
 </head>
 
 <body>
+  <div class="modal fade" id="janela" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">
+            Deposito
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+
+        <div class="modal-body d-flex flex-column">
+          <div id="modal-load" class="loader-1 center" style="width: 100%"><span></span></div>
+          <svg id="modal-ok" class="svg-ok-bad" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 130.2 130.2">
+            <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1"
+              cy="65.1" r="62.1" />
+            <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round"
+              stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+          </svg>
+          <svg id="modal-bad" class="svg-ok-bad" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 130.2 130.2">
+            <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6" stroke-miterlimit="10" cx="65.1"
+              cy="65.1" r="62.1" />
+            <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round"
+              stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3" />
+            <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round"
+              stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2" />
+          </svg>
+
+          <div class="d-flex flex-column align-items-center">
+            <iframe id="qrcode" src="" frameborder="0" width="150"></iframe>
+          </div>
+          <div class="d-flex flex-column align-items-center">
+
+
+            <p id="texto-modal">
+              Realizando deposito...
+            </p>
+            <button id="modal-fechar" class="button-6 rounded botao-modal" type="button" data-dismiss="modal"
+              aria-label="Close">
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container container-corpo">
     <div class="corpo rounded-lg">
       <header class="menu">
@@ -37,8 +88,13 @@
         </div>
       </header>
 
-      <form class="grid">
-        <!-- <div class="row justify-content-between ">
+      <form class="grid" id="form-transferir">
+        <div>
+          <input type="checkbox" name="externa" id="externa-checkbox">
+          <label for="externa">Transferencia Externa</label>
+        </div>
+
+        <div id="row-externo" class="row justify-content-between ">
           <div class="col-lg-3">
             <div class="form-group">
               <label for="banco">Banco</label>
@@ -57,24 +113,25 @@
               <input id="conta" name="conta" type="text" class="form-control" placeholder="0000-33" />
             </div>
           </div>
-        </div> -->
+        </div>
         <div class="row justify-content-between">
           <div class="col-lg-3">
             <div class="form-group">
               <label for="cpf">CPF</label>
-              <input id="cpf" type="text" name="cpf" class="form-control" placeholder="123.456.789-10" />
+              <input name="cpf" id="cpf" type="text" name="cpf" class="form-control" placeholder="123.456.789-10" />
             </div>
           </div>
           <div class="col-lg-3">
             <div class="form-group">
               <label for="data">Data</label>
-              <input id="data" type="date" class="form-control" />
+              <input name="data" id="data" type="date" class="form-control" />
             </div>
           </div>
           <div class="col-lg-3">
             <div class="form-group">
               <label for="valor">Valor</label>
-              <input id="valor" type="text" class="form-control" placeholder="R$0,00" onkeyup="mascara(this)" />
+              <input name="valor" id="valor" type="text" class="form-control" placeholder="R$0,00"
+                onkeyup="mascara(this)" />
             </div>
           </div>
         </div>
@@ -98,37 +155,19 @@
             </div>
           </div>
         </div>
-        <button class="button-6 rounded" role="button" type="button" data-toggle="modal" data-target="#janela">
+        <button class="button-6 rounded">
           Transferência
         </button>
       </form>
 
-      <div class="modal fade" id="janela" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">
-                Transferência
-              </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="alert alert-success" role="alert">
-                Transferência realizada com sucesso!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
 
     </div>
   </div>
 
   <script type="text/javascript" src="../static/js/lib/jquery.js"></script>
   <script type="text/javascript" src="../static/js/lib/bootstrap.js"></script>
+  <script src="../static/js/transferencia.js"></script>
 
   <script src="../static/js/deptrans.js"></script>
   <script src="../static/js/menu.js"></script>

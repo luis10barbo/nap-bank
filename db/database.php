@@ -30,6 +30,16 @@ class Database
         $current = file_get_contents(__DIR__ . "/current.sql");
         return $new === $current;
     }
+
+    public static function unlink_db()
+    {
+        if (isset($db)) {
+            unset(self::$db);
+            return true;
+        }
+        return false;
+    }
+
     private static function adquirir_db()
     {
         global $diretorio_db;

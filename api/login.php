@@ -9,7 +9,6 @@ if (!isset($_POST["email"]) || !isset($_POST["senha"]))
     return;
 
 
-echo $email, $senha;
 $email = $_POST["email"];
 $senha = $_POST["senha"];
 
