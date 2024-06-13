@@ -9,6 +9,8 @@ if (isset($_POST["externa"])) {
     $transferencia_externa = false;
 }
 
+$tipo_transferencia = $_POST["tipo"];
+
 $usuario = adquirir_usuario();
 if (!isset($usuario)) {
     echo criar_erro("Nao autorizado, faca login antes de usar essa funcionalidade");
@@ -47,20 +49,42 @@ if ($usuario["saldo"] < $valor) {
     die();
 }
 
-$destinatario = Database::usuario()->buscar_cpf($cpf);
-if (empty($destinatario)) {
-    echo criar_erro("Usuario com cpf " . $cpf . " nao existe!");
-    die();
+$destinatario = null;
+if ($tipo_transferencia === "TED") {
+    $destinatario = Database::usuario()->buscar_cpf($cpf);
+    if (empty($destinatario)) {
+        echo criar_erro("Usuario com cpf " . $cpf . " nao existe!");
+        die();
+    }
+} else {
+    $chave = Database::chave()->buscar_chave($_POST["chave"]);
+    if ($chave === false) {
+        echo criar_erro("Chave pix " . $_POST["chave"] . " inexistente!");
+        die();
+    }
+    $destinatario = Database::usuario()->buscar($chave["id_usuario"]);
+    if (empty($destinatario)) {
+        echo criar_erro("Usuario com chave pix " . $_POST["chave"] . " nao existe!");
+        die();
+    }
 }
 
 
 Database::usuario()->atualizar_saldo($usuario["id_usuario"], $usuario["saldo"] - $valor);
-if ($transferencia_externa !== false) {
+if ($tipo_transferencia === "TED") {
+    if ($transferencia_externa !== false) {
+        Database::usuario()->atualizar_saldo($destinatario["id_usuario"], $destinatario["saldo"] + $valor);
+        echo criar_sucesso("Voce transferiu R$" . $valor . " para " . $destinatario["nome_usuario"] . "!");
+        Database::historico_transferencia()->criar_interna($usuario["id_usuario"], $destinatario["id_usuario"], $destinatario["cpf_usuario"], $valor, "", "");
+    } else {
+        echo criar_sucesso("Voce transferiu R$" . $valor . " para cpf: " . $cpf . ", banco: " . $_POST["banco"] . ", agencia: " . $_POST["agencia"] . ", conta: " . $_POST["conta"] . "!");
+        Database::historico_transferencia()->criar_externa($usuario["id_usuario"], $destinatario["id_usuario"], $_POST["banco"], $_POST["agencia"], $_POST["conta"], $destinatario["cpf_usuario"], $valor, "", "");
+
+    }
+} else {
+
     Database::usuario()->atualizar_saldo($destinatario["id_usuario"], $destinatario["saldo"] + $valor);
     echo criar_sucesso("Voce transferiu R$" . $valor . " para " . $destinatario["nome_usuario"] . "!");
     Database::historico_transferencia()->criar_interna($usuario["id_usuario"], $destinatario["id_usuario"], $destinatario["cpf_usuario"], $valor, "", "");
-} else {
-    echo criar_sucesso("Voce transferiu R$" . $valor . " para cpf: " . $cpf . ", banco: " . $_POST["banco"] . ", agencia: " . $_POST["agencia"] . ", conta: " . $_POST["conta"] . "!");
-    Database::historico_transferencia()->criar_externa($usuario["id_usuario"], $destinatario["id_usuario"], $_POST["banco"], $_POST["agencia"], $_POST["conta"], $destinatario["cpf_usuario"], $valor, "", "");
 
 }

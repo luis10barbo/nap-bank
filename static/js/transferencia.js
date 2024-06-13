@@ -1,14 +1,39 @@
 // @ts-ignore
 // $("#janela").modal();
-$("#externa-checkbox").on("change", (event) => {
-    const checked = $("#externa-checkbox").is(":checked");
-    if (checked) {
-        $("#row-externo").show();
-        return;
-    }
-    $("#row-externo").hide();
 
-})
+function updateUI() {
+    console.log("teste")
+    const tipoChecked = $("input[name=tipo]:checked").val();
+    const externo = $("#externa-checkbox").is(":checked");
+    if (externo) {
+        console.log(tipoChecked, tipoChecked==="PIX");
+        if (tipoChecked === "PIX") {
+            $("#row-externo").hide();
+            $("#container-cpf").hide();
+            $("#container-chave").show();
+        } else {
+            console.log("foi");
+            $("#row-externo").show();
+            $("#container-cpf").show();
+            $("#container-chave").hide();
+        }
+    } else {
+        $("#row-externo").hide();
+        if (tipoChecked === "PIX") {
+            $("#container-cpf").hide();
+            $("#container-chave").show();
+        } else {
+            $("#container-cpf").show();
+            $("#container-chave").hide();
+        }
+    }
+
+    
+    // $("#row-externo").hide();
+}
+$(".radio-tipo").on("change", updateUI)
+
+$("#externa-checkbox").on("change", updateUI)
 $("#externa-checkbox").prop("checked", false);
 $("#row-externo").hide();
 

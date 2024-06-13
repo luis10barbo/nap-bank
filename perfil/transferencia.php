@@ -89,9 +89,20 @@
       </header>
 
       <form class="grid" id="form-transferir">
-        <div>
-          <input type="checkbox" name="externa" id="externa-checkbox">
-          <label for="externa">Transferencia Externa</label>
+        <div class="d-flex " style="gap:50px">
+
+          <div>
+            <input class="radio-tipo" type="radio" name="tipo" id="ted-checkbox" checked value="TED">
+            <label for="TED">TED</label>
+            <input class="radio-tipo" type="radio" name="tipo" id="pix-checkbox" value="PIX">
+            <label for="pix">PIX</label>
+          </div>
+          <div>
+            <input type="checkbox" name="externa" id="externa-checkbox">
+            <label for="externa">Transferencia Externa</label>
+          </div>
+
+
         </div>
 
         <div id="row-externo" class="row justify-content-between ">
@@ -115,7 +126,13 @@
           </div>
         </div>
         <div class="row justify-content-between">
-          <div class="col-lg-3">
+          <div class="col-lg-3" id="container-chave">
+            <div class="form-group">
+              <label for="chave">Chave</label>
+              <input name="chave" id="chave" type="text" class="form-control" placeholder="chave pix" />
+            </div>
+          </div>
+          <div class="col-lg-3" id="container-cpf">
             <div class="form-group">
               <label for="cpf">CPF</label>
               <input name="cpf" id="cpf" type="text" name="cpf" class="form-control" placeholder="123.456.789-10" />

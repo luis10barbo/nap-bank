@@ -23,10 +23,13 @@ class ChavePix extends Tabela
         return "chave_pix";
     }
 
-    public function criar(int $id_usuario)
+    public function criar(int $id_usuario, string|null $valor, string $tipo = "aleatoria")
     {
-        $chave = guidv4();
-        return $this->__inserir(array("chave" => $chave, "id_usuario" => $id_usuario));
+        $chave = null;
+        if ($tipo == "aleatoria" || $valor === null) {
+            $chave = guidv4();
+        }
+        return $this->__inserir(array("chave" => $chave, "id_usuario" => $id_usuario, "tipo" => $tipo));
     }
 
     public function buscar_chave(string $chave)
