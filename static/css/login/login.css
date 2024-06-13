@@ -16,10 +16,15 @@ body{
     margin: 0;
     background: linear-gradient(to top right,#FF00c7, #9F6DD2);
 }
+
+#titulo {
+    padding-bottom: 1rem;
+}
 .main{
     background-color: white;
-    width: 60vh;
-    height: 50vh;
+    /* width: 60vh; */
+    /* height: 50vh; */
+    padding: 5rem 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,18 +33,15 @@ body{
 #button{
     background: linear-gradient(to top right, #FF00c7, #9F6DD2);
     border: 0;
-    filter: drop-shadow(0 0 0.50rem black);
+    /* filter: drop-shadow(0 0 0.50rem black); */
 }
-#a{
-    color: black;
-    font-family: "Outfti",sans-serif;
-    font-size: 1em;
-}
+a:hover {color: #0067d6 !important;}
+
 #mover{
+    width: 100%;
     display: flex;
-    justify-items: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 7px;
-    margin-left: 50px;
-    margin-top: 25px;
+    /* margin-left: 50px; */
+    /* margin-top: 25px; */
 }

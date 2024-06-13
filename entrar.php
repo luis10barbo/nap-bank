@@ -44,6 +44,7 @@ if (!empty(adquirir_usuario())) {
 
   <div class="main">
     <form id="form-entrar">
+      <h2 id="titulo">Entrar</h2>
       <div class="form-group">
         <label for="email">Email</label>
         <input name="email" type="email" class="form-control" id="email" placeholder="Digite seu email" />
@@ -52,7 +53,7 @@ if (!empty(adquirir_usuario())) {
         <label for="senha">Senha</label>
         <input name="senha" type="password" class="form-control" id="senha" placeholder="Digite sua senha" />
       </div>
-      <div id="mover" class="row">
+      <div id="mover">
         <a id="a" href="registrar.php">Fazer Cadastro</a>
         <button id="button" class="btn btn-primary">Enviar</button>
       </div>
