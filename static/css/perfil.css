@@ -83,40 +83,6 @@ p {
     color: white;
 }
 
-.sidenav {
-    margin-right: -4px;
-    margin-top: 340px;
-    height: 400px;
-    width: 0;
-    position: absolute;
-    z-index: 1;
-    background: linear-gradient(-110deg, #9F6DD2, #FF00C7);
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
 #imgPerfil {
     width: 200px;
     height: 200px;

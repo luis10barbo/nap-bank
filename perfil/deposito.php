@@ -14,6 +14,8 @@ if (empty(adquirir_usuario())) {
   <link rel="stylesheet" href="../static/css/deposito/dep.css" />
   <link rel="stylesheet" href="../static/css/depTrans.css" />
   <link rel="stylesheet" href="../static/css/lib/bootstrap.css" />
+  <link rel="stylesheet" href="../static/css/menu.css">
+
 
   <title>Depósito</title>
 </head>

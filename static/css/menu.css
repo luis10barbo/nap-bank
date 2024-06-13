@@ -1,6 +1,6 @@
 .menu{
     z-index: 1;
-    position: relative;
+    position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -12,9 +12,10 @@
 }
 
 .sidenav {
+    top:0;
     right: 0;
     margin-right: -4px;
-    margin-top: 340px;
+    /* margin-top: 340px; */
     height: 400px;
     width: 0;
     position: absolute;

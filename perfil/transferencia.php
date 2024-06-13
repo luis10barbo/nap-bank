@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../static/css/depTrans.css" />
+  <link rel="stylesheet" href="../static/css/menu.css">
   <link rel="stylesheet" href="../static/css/transferencia/tran.css" />
   <link rel="stylesheet" href="../static/css/lib/bootstrap.css" />
   <title>Transferencia</title>
@@ -36,7 +37,7 @@
       </header>
 
       <form class="grid">
-        <div class="row justify-content-around ">
+        <div class="row justify-content-between ">
           <div class="col-lg-3">
             <div class="form-group">
               <label for="banco">Banco</label>
@@ -56,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-around">
+        <div class="row justify-content-between">
           <div class="col-lg-3">
             <div class="form-group">
               <label for="cpf">CPF</label>
@@ -76,14 +77,18 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-around">
+        <div class="row justify-content-between">
           <div class="col-lg-3">
             <div class="form-group">
               <label>Tipo de conta</label><br /><br />
-              <input name="rad" id="radio1" type="radio" />
-              <label for="radio1">Corrente</label>
-              <input name="rad" id="radio2" type="radio" />
-              <label for="radio2">Poupança</label>
+              <div>
+                <input name="rad" id="radio1" type="radio" />
+                <label for="radio1">Corrente</label>
+              </div>
+              <div>
+                <input name="rad" id="radio2" type="radio" />
+                <label for="radio2">Poupança</label>
+              </div>
             </div>
           </div>
           <div class="col-lg-7">

@@ -8,6 +8,7 @@
   <title>Emprestimo</title>
   <link rel="stylesheet" href="../static/css/emprestimo.css" />
   <link rel="stylesheet" href="../static/css/lib/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/menu.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
