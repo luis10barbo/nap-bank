@@ -96,8 +96,8 @@ if (empty($usuario)) {
               <img class="icone-botao" src="../static/img/perfil/transfer.svg" alt="" />
               Transferência
             </a>
-            <a href="pagar.php" id="btnAcoes" class="button-6 col-md rounded">
-              <img class="icone-botao" src="../static/img/perfil/pay.svg" />Pagar
+            <a href="pix.php" id="btnAcoes" class="button-6 col-md rounded">
+              <img class="icone-botao" src="../static/img/perfil/pay.svg" />Área PIX
             </a>
             <a href="deposito.php" id="btnAcoes" class="button-6 col-md rounded">
               <img class="icone-botao" src="../static/img/perfil/deposit.svg" />Depósito
