@@ -73,7 +73,7 @@ if ($tipo_transferencia === "TED") {
 Database::usuario()->atualizar_saldo($usuario["id_usuario"], $usuario["saldo"] - $valor);
 if ($tipo_transferencia === "TED") {
     if ($transferencia_externa !== false) {
-        if ($usuario["id_usuario"] === $destinatario["id_destinatario"]) {
+        if ($usuario["id_usuario"] === $destinatario["id_usuario"]) {
             echo criar_erro("Voce nao pode enviar uma transferencia para si mesmo");
             die();
         }
@@ -90,7 +90,7 @@ if ($tipo_transferencia === "TED") {
     Database::usuario()->atualizar_saldo($destinatario["id_usuario"], $destinatario["saldo"] + $valor);
     echo criar_sucesso("Voce transferiu R$" . $valor . " para " . $destinatario["nome_usuario"] . "!");
     if ($transferencia_externa !== false) {
-        if ($usuario["id_usuario"] === $destinatario["id_destinatario"]) {
+        if ($usuario["id_usuario"] === $destinatario["id_usuario"]) {
             echo criar_erro("Voce nao pode enviar uma transferencia para si mesmo");
             die();
         }

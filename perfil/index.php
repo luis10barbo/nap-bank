@@ -1,6 +1,7 @@
 <?php
 require_once (__DIR__ . "/../utils/sessao.php");
 $usuario = adquirir_usuario();
+$chave = Database::chave()->buscar_usuario($usuario["id_usuario"]);
 if (empty($usuario)) {
   header("Location: ../entrar.php");
   die();
@@ -35,7 +36,7 @@ if (empty($usuario)) {
           <a href="historico.php">Historico</a>
 
           <!-- <a href="#">Cartões</a> -->
-          <a href="pix.php">PIX</a>
+          <!-- <a href="pix.php">PIX</a> -->
           <a href="javascript:void(0)" id="botao-sair">Sair</a>
         </div>
         <div class="logo">
@@ -53,6 +54,14 @@ if (empty($usuario)) {
             <div id="info-nome" class="row-md">
               <h3><?php echo $usuario["nome_usuario"] ?></h3>
               <h6><?php echo $usuario["email_usuario"] ?></h6>
+              <h6><?php echo $usuario["cpf_usuario"] ?></h6>
+              <?php
+              if ($chave !== false) {
+                echo '<h6>pix:' . $chave["chave"] . '</h6>';
+              }
+              ?>
+
+
             </div>
             <div id="info-conta" class="row-md-6">
               <div class="col-md-3">

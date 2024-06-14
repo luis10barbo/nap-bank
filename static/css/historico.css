@@ -202,8 +202,14 @@ img {
     background-color: #f0f0f0;
     padding:1rem;
     border-radius: 1rem;
+    overflow: auto;
 }
 
+.grid-historico > p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 @media (max-width:991px) {
     body {

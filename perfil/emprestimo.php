@@ -33,7 +33,7 @@
             <a href="historico.php">Historico</a>
 
             <!-- <a href="#">Cartões</a> -->
-            <a href="pix.php">PIX</a>
+            <!-- <a href="pix.php">PIX</a> -->
             <a href="javascript:void(0)" id="botao-sair">Sair</a>
           </div>
           <div class="logo" onclick="openNav()">

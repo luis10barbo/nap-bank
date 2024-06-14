@@ -41,7 +41,7 @@ $recebidos = Database::historico_transferencia()->buscar_recebidos($usuario["id_
                     <a href="historico.php">Historico</a>
 
                     <!-- <a href="#">Cartões</a> -->
-                    <a href="pix.php">PIX</a>
+                    <!-- <a href="pix.php">PIX</a> -->
                     <a href="javascript:void(0)" id="botao-sair">Sair</a>
                 </div>
                 <div class="logo">
@@ -53,6 +53,10 @@ $recebidos = Database::historico_transferencia()->buscar_recebidos($usuario["id_
             <h2>Enviados</h2>
 
             <section class="grid-historico">
+                <p>Destinatario</p>
+                <p>Chave PIX</p>
+                <p>CPF</p>
+                <p>Valor</p>
                 <!-- agencia_destinatario: null
 
 banco_destinatario: null
@@ -75,10 +79,10 @@ mensagem: ""
 ​​
 valor: 29 -->
                 <?php foreach ($enviados as $valor) {
-                    echo ' <div class="column col d-flex flex-column align-items-center"><p>Destinatario</p> <p>' . $valor["id_destinatario"] . '</p></div>' .
-                        '<div class="column col  d-flex flex-column align-items-center"><p>Chave PIX</p> <p>' . $valor["chave_destinatario"] . '</p></div>' .
-                        '<div class="column col d-flex flex-column align-items-center"><p>CPF</p> <p>' . (!is_null($valor["cpf_destinatario"]) ? $valor["cpf_destinatario"] : "null") . '</p></div>' .
-                        '<div class="column col  d-flex flex-column align-items-center"><p>Valor</p> <p>' . (!is_null($valor["valor"]) ? $valor["valor"] : "null") . '</p></div>' .
+                    echo ' <div class="column col d-flex flex-column align-items-center"> <p>' . $valor["id_destinatario"] . '</p></div>' .
+                        '<div class="column col  d-flex flex-column align-items-center"> <p>' . (!empty($valor["chave_destinatario"]) ? $valor["chave_destinatario"] : "null") . '</p></div>' .
+                        '<div class="column col d-flex flex-column align-items-center"> <p>' . (!empty($valor["cpf_destinatario"]) ? $valor["cpf_destinatario"] : "null") . '</p></div>' .
+                        '<div class="column col  d-flex flex-column align-items-center"> <p>' . (!empty($valor["valor"]) ? $valor["valor"] : "null") . '</p></div>' .
 
                         '';
                 } ?>
@@ -87,11 +91,15 @@ valor: 29 -->
             </section>
             <h2>Recebimentos</h2>
             <section class="grid-historico">
+                <p>Remetente</p>
+                <p>Chave PIX</p>
+                <p>CPF</p>
+                <p>Valor</p>
                 <?php foreach ($recebidos as $valor) {
-                    echo ' <div class="column col d-flex flex-column align-items-center"><p>Remetente</p> <p>' . $valor["id_remetente"] . '</p></div>' .
-                        '<div class="column col  d-flex flex-column align-items-center"><p>Chave PIX</p> <p>' . $valor["chave_destinatario"] . '</p></div>' .
-                        '<div class="column col d-flex flex-column align-items-center"><p>CPF</p> <p>' . (!is_null($valor["cpf_destinatario"]) ? $valor["cpf_destinatario"] : "null") . '</p></div>' .
-                        '<div class="column col  d-flex flex-column align-items-center"><p>Valor</p> <p>' . (!is_null($valor["valor"]) ? $valor["valor"] : "null") . '</p></div>' .
+                    echo ' <div class="column col d-flex flex-column align-items-center"> <p>' . $valor["id_remetente"] . '</p></div>' .
+                        '<div class="column col  d-flex flex-column align-items-center"> <p>' . (!is_null($valor["chave_destinatario"]) ? $valor["chave_destinatario"] : "null") . '</p></div>' .
+                        '<div class="column col d-flex flex-column align-items-center"> <p>' . (!is_null($valor["cpf_destinatario"]) ? $valor["cpf_destinatario"] : "null") . '</p></div>' .
+                        '<div class="column col  d-flex flex-column align-items-center"> <p>' . (!is_null($valor["valor"]) ? $valor["valor"] : "null") . '</p></div>' .
 
                         '';
                 } ?>
